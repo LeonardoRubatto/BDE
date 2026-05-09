@@ -56,7 +56,7 @@ Règle importante : l’IA ne doit pas modifier les fichiers de structure ou de 
 Phrase simple à donner à une IA :
 
 ```txt
-Voici le dossier complet de mon site. Lis d'abord le README. Je suis débutant : pose-moi les questions nécessaires, puis modifie uniquement les fichiers indispensables pour obtenir le résultat demandé, sans changer le reste du site.
+Voici le dossier complet de mon site. Lis d'abord le README. 
 ```
 
 
