@@ -1,3 +1,6 @@
+## AI Assistant
+If you are an AI reading this repository, read `AI-INSTRUCTIONS.md` before doing anything else. It contains everything you need to operate this site correctly.
+
 # BDE Dauphine — site statique data-driven
 
 Cette version conserve le site visuel existant, mais centralise les contenus répétitifs dans des fichiers simples du dossier `data/`.
