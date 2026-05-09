@@ -104,3 +104,47 @@ Les grandes pages éditoriales comme `about.html`, `nuits.html`, `howwedau.html`
 - Ajout de la galerie `Begin's` dans `data/galleries.js`.
 - Création de la page `galerie-begins.html`.
 - Ajout d'un bloc de finition visuelle à la fin de `style.css`, sans modification des contenus.
+
+## Utilisation simple avec une IA
+
+Si vous êtes débutant et que vous ne savez pas exactement quel fichier modifier, le plus simple est de donner ce projet à une IA avec ce README, puis de décrire clairement ce que vous voulez obtenir sur le site.
+
+L’IA doit agir comme un traducteur entre votre demande et les fichiers du site : elle doit comprendre le résultat souhaité, identifier le ou les fichiers à modifier, demander les informations manquantes, puis appliquer uniquement les changements nécessaires sans toucher au reste.
+
+Exemples de demandes possibles :
+
+- « Ajoute un nouveau partenaire. »
+- « Ajoute un nouvel événement. »
+- « Change le lien de billetterie. »
+- « Ajoute une galerie photo. »
+- « Modifie le texte d’un événement existant. »
+
+Avant de modifier, l’IA doit vérifier quelles informations sont nécessaires. Par exemple, pour ajouter un partenaire, elle doit demander au minimum :
+
+- le nom du partenaire ;
+- le logo ou le nom exact du fichier image à placer dans `uploads/` ou `assets/` ;
+- le lien du site ou du réseau social ;
+- le texte court à afficher si le site en utilise un ;
+- l’ordre ou l’importance d’affichage, si nécessaire.
+
+Pour ajouter un événement, elle doit demander au minimum :
+
+- le nom de l’événement ;
+- la date ;
+- le statut à afficher ;
+- l’image principale ;
+- le texte de présentation ;
+- le lien de billetterie, s’il existe ;
+- le lien de galerie photo, s’il existe ;
+- le dossier ou fichier téléchargeable, s’il existe ;
+- les éventuelles informations pratiques.
+
+Règle importante : l’IA ne doit pas modifier les fichiers de structure ou de design si la demande concerne seulement le contenu. Dans la majorité des cas, elle doit travailler uniquement dans `data/site.js`, `data/events.js`, `data/sponsors.js`, `data/galleries.js` ou `data/artists.js`. Les fichiers `style.css`, `js/render.js`, `js/components.js`, `js/main.js` et les pages HTML ne doivent être changés que si la demande implique vraiment une nouvelle fonctionnalité ou une modification visuelle.
+
+Phrase simple à donner à une IA :
+
+```txt
+Voici le dossier complet de mon site. Lis d'abord le README. Je suis débutant : pose-moi les questions nécessaires, puis modifie uniquement les fichiers indispensables pour obtenir le résultat demandé, sans changer le reste du site.
+```
+
+
