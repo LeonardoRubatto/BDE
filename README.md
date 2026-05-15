@@ -1,156 +1,127 @@
-## AI Assistant
+# AI Assistant
 If you are an AI reading this repository, read `AI-INSTRUCTIONS.md` before doing anything else. It contains everything you need to operate this site correctly.
 
-# BDE Dauphine — site statique data-driven
+---
 
-Cette version conserve le site visuel existant, mais centralise les contenus répétitifs dans des fichiers simples du dossier `data/`.
+# BDE Dauphine — Site statique data-driven
 
-## Principe
+Site vitrine du Bureau des Étudiants de l'Université Paris Dauphine-PSL.  
+Statique, bilingue FR/EN, déployé sur Cloudflare Pages via GitHub.
 
-Le visiteur voit toujours des pages HTML classiques : `index.html`, `evenements.html`, `partenaires.html`, etc.
+---
 
-La différence est interne : plusieurs sections ne sont plus écrites en dur dans chaque page. Elles sont générées automatiquement depuis les fichiers suivants :
+## Architecture
 
-- `data/site.js` : année, liens sociaux, contact, footer, navigation, billetterie Shotgun.
-- `data/events.js` : événements, textes, images, galeries liées.
-- `data/sponsors.js` : sponsors, logos, liens, ordre d'affichage.
-- `data/galleries.js` : images des galeries et liens Google Photos.
-- `data/artists.js` : artistes du carrousel de la page d'accueil.
+Le site est **100 % statique** — aucun CMS, aucune base de données, aucun backend.  
+Les pages HTML sont générées visuellement depuis des fichiers JavaScript dans `data/`.
 
-## Utilisation simple avec une IA
+```
+data/site.js       → config globale (nom, contact, réseaux, nav, footer, billetterie)
+data/events.js     → événements, dates, statuts, textes, images, galeries
+data/sponsors.js   → partenaires, logos, liens, ordre
+data/galleries.js  → galeries photos, légendes, albums Google Photos
+data/artists.js    → artistes du carrousel homepage
 
-Si vous êtes débutant et que vous ne savez pas exactement quel fichier modifier, le plus simple est de donner ce projet à une IA avec ce README, puis de décrire clairement ce que vous voulez obtenir sur le site.
-
-L’IA doit agir comme un traducteur entre votre demande et les fichiers du site : elle doit comprendre le résultat souhaité, identifier le ou les fichiers à modifier, demander les informations manquantes, puis appliquer uniquement les changements nécessaires sans toucher au reste.
-
-Exemples de demandes possibles :
-
-- « Ajoute un nouveau partenaire. »
-- « Ajoute un nouvel événement. »
-- « Change le lien de billetterie. »
-- « Ajoute une galerie photo. »
-- « Modifie le texte d’un événement existant. »
-
-Avant de modifier, l’IA doit vérifier quelles informations sont nécessaires. Par exemple, pour ajouter un partenaire, elle doit demander au minimum :
-
-- le nom du partenaire ;
-- le logo ou le nom exact du fichier image à placer dans `uploads/` ou `assets/` ;
-- le lien du site ou du réseau social ;
-- le texte court à afficher si le site en utilise un ;
-- l’ordre ou l’importance d’affichage, si nécessaire.
-
-Pour ajouter un événement, elle doit demander au minimum :
-
-- le nom de l’événement ;
-- la date ;
-- le statut à afficher ;
-- l’image principale ;
-- le texte de présentation ;
-- le lien de billetterie, s’il existe ;
-- le lien de galerie photo, s’il existe ;
-- le dossier ou fichier téléchargeable, s’il existe ;
-- les éventuelles informations pratiques.
-
-Règle importante : l’IA ne doit pas modifier les fichiers de structure ou de design si la demande concerne seulement le contenu. Dans la majorité des cas, elle doit travailler uniquement dans `data/site.js`, `data/events.js`, `data/sponsors.js`, `data/galleries.js` ou `data/artists.js`. Les fichiers `style.css`, `js/render.js`, `js/components.js`, `js/main.js` et les pages HTML ne doivent être changés que si la demande implique vraiment une nouvelle fonctionnalité ou une modification visuelle.
-
-Phrase simple à donner à une IA :
-
-```txt
-Voici le dossier complet de mon site. Lis d'abord le README. 
+js/render.js       → moteur de rendu (lit data/, injecte dans le HTML)
+js/components.js   → composants communs (nav, footer, modal, sponsors)
+js/main.js         → point d'entrée
+style.css          → design global
 ```
 
+---
 
+## Système de gestion des données — 3 niveaux
 
-## Structure
+### Niveau 1 — Modifier directement un fichier `data/*.js`
+La méthode la plus directe. Modifier le fichier, pousser sur GitHub.  
+La sync se fait automatiquement (voir ci-dessous).
 
-```txt
-site-v4/
-  index.html
-  evenements.html
-  howwedau.html
-  nuits.html
-  partenaires.html
-  about.html
-  mentions-legales.html
-  galerie-*.html
-  style.css
-  uploads/
-  assets/
-  data/
-  js/
-```
+### Niveau 2 — Modifier via Excel (`admin.xlsx`)
+Plus convivial. Ouvrir `admin.xlsx`, modifier dans les onglets, pousser sur GitHub.  
+Chaque onglet correspond à un type de données :
 
-## Prérequis
+| Onglet | Contenu |
+|---|---|
+| Config | Paramètres globaux du site |
+| Navigation | Liens du menu |
+| Events | Événements (champs principaux) |
+| Event_Descriptions | Paragraphes de description par événement |
+| Event_Meta | Métadonnées affichées par événement |
+| Event_Tags | Tags/badges par événement |
+| Event_Artists | Artistes liés à un événement |
+| Sponsors | Partenaires |
+| Artists_Cartes | Carrousel artistes homepage |
+| Artists_Bande | Bande de texte défilant |
+| Galeries | Galeries photos |
+| Galerie_Images | Photos par galerie |
 
-Aucun CMS, aucune base de données, aucun outil externe obligatoire.
+### Niveau 3 — Automatique via GitHub Actions
+**Dès qu'un push est détecté sur `main` :**
+- Si `data/*.js` a changé → `admin.xlsx` est mis à jour automatiquement
+- Si `admin.xlsx` a changé → `data/*.js` sont mis à jour automatiquement
+- Cloudflare Pages redéploie ensuite le site avec les données à jour
 
-Pour tester localement, le plus fiable est d'ouvrir le dossier avec un petit serveur local, car certains navigateurs peuvent limiter JavaScript avec `file://`.
+Les deux sources sont toujours synchronisées. Il n'y a rien à lancer manuellement.
 
-Option simple si Python est installé :
+---
 
+## Déploiement
+
+### GitHub → Cloudflare Pages
+1. Connecter le dépôt GitHub à Cloudflare Pages
+2. Aucune build command nécessaire
+3. Output directory : `/` (racine)
+4. Tout push sur `main` déclenche un redéploiement automatique
+
+### Test local
 ```bash
 python -m http.server 8000
 ```
+Puis ouvrir `http://localhost:8000`
 
-Puis ouvrir :
+---
 
-```txt
-http://localhost:8000
-```
+## Workflow quotidien
 
-Sur Cloudflare Pages ou tout hébergement statique, il suffit d'envoyer le dossier.
+**Modifier via Excel (méthode recommandée pour les non-techniques) :**
+1. Ouvrir `admin.xlsx` depuis le dépôt (ou le télécharger)
+2. Modifier les données dans les onglets concernés
+3. Sauvegarder et pousser sur GitHub
+4. GitHub Actions met à jour `data/*.js` → Cloudflare redéploie
 
-## Fichiers à modifier
+**Modifier directement un fichier `data/*.js` :**
+1. Éditer le fichier dans `data/`
+2. Pousser sur GitHub
+3. GitHub Actions met à jour `admin.xlsx` → Cloudflare redéploie
 
-Modifier principalement :
+**Sur Windows sans GitHub (local seulement) :**
+- `init_excel.bat` : recrée `admin.xlsx` depuis les JS actuels
+- `update_site.bat` : applique `admin.xlsx` vers les JS
 
-- `data/site.js`
-- `data/events.js`
-- `data/sponsors.js`
-- `data/galleries.js`
-- `data/artists.js`
+---
 
-## Fichiers à éviter de modifier
-
-Éviter sauf besoin technique :
-
-- `js/components.js`
-- `js/render.js`
-- `js/main.js`
+## Fichiers à ne jamais modifier sans raison technique
+- `js/render.js`, `js/components.js`, `js/main.js`
 - `style.css`
+- Les pages HTML (sauf ajout de nouvelle page)
 
-Les fichiers HTML restent lisibles et commentés, mais les sections automatiques ne doivent pas être remplies directement dedans.
+---
 
-## Déploiement Cloudflare Pages
+## Convention dans admin.xlsx
 
-1. Mettre tout le contenu du dossier sur le dépôt ou l'espace utilisé par Cloudflare Pages.
-2. Aucun build command n'est nécessaire.
-3. Output directory : racine du site.
-4. Déployer.
-5. Vérifier `index.html`, `evenements.html`, `partenaires.html`, les galeries et la modal billetterie.
+| Valeur | Signification |
+|---|---|
+| `OUI` | true |
+| `NON` | false |
+| *(cellule vide)* | chaîne vide / non défini |
+| `a.jpg ; b.jpg` | liste de chemins séparés par `;` |
 
-## Ce qui a été centralisé
+---
 
-- Navigation globale.
-- Footer global.
-- Modal billetterie / Shotgun.
-- Sponsors et partenaires.
-- Liste événements accueil.
-- Sections événements de la page Événements.
-- Grilles des pages galerie.
-- Bande photo de la page d'accueil.
-- Carrousel artistes de la page d'accueil.
+## Utilisation avec une IA
 
-## Limite volontaire
-
-Les grandes pages éditoriales comme `about.html`, `nuits.html`, `howwedau.html` gardent encore une partie de leur texte directement dans le HTML afin de préserver exactement la mise en page actuelle. Les blocs les plus répétitifs ont été centralisés en priorité.
-
-## Dernière mise à jour appliquée
-
-- Ajout de l'événement `Begin's` dans `data/events.js`.
-- Ajout de la galerie `Begin's` dans `data/galleries.js`.
-- Création de la page `galerie-begins.html`.
-- Ajout d'un bloc de finition visuelle à la fin de `style.css`, sans modification des contenus.
-
-
-
+```
+Voici le dossier complet de mon site. Lis d'abord AI-INSTRUCTIONS.md.
+Je suis débutant : pose-moi les questions nécessaires, puis modifie
+uniquement les fichiers indispensables pour obtenir le résultat demandé.
+```
