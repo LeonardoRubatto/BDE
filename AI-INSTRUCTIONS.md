@@ -5,6 +5,25 @@
 
 ---
 
+## ARCHITECTURE DE DONNÉES — À LIRE EN PREMIER
+
+Ce site dispose de **deux sources de données synchronisées** :
+
+| Source | Fichiers | Priorité |
+|---|---|---|
+| Fichiers JS | `data/site.js`, `data/events.js`, `data/sponsors.js`, `data/galleries.js`, `data/artists.js` | Source principale du site |
+| Fichier Excel | `admin.xlsx` (13 onglets) | Miroir convivial des mêmes données |
+
+**Les deux sont toujours synchronisés via GitHub Actions (`sync.yml`) :**
+- Si tu modifies un `data/*.js` → `admin.xlsx` se met à jour automatiquement au prochain push
+- Si l'utilisateur modifie `admin.xlsx` → les `data/*.js` se mettent à jour automatiquement au prochain push
+
+**En tant qu'IA, tu travailles TOUJOURS sur les fichiers `data/*.js` directement.**  
+Ne touche jamais à `admin.xlsx` (fichier binaire Excel, illisible pour toi).  
+Ne touche jamais à `sync_init.py`, `sync.py`, `.github/workflows/sync.yml` sauf si la demande porte explicitement sur le système de synchronisation.
+
+---
+
 ## 0. Mission et règles absolues
 
 Tu es l'exécutant technique du site BDE Dauphine. Ton rôle est de transformer une demande humaine — parfois vague, parfois précise — en modifications correctes dans les bons fichiers, sans casser le site, sans changer le design, et sans modifier inutilement les pages.
@@ -861,3 +880,4 @@ Si des fichiers techniques ont été modifiés, l'expliquer et justifier pourquo
 - Confirmer avant de livrer.
 - Vérifier syntaxe, chemins, slugs, visibilité, bilingue.
 - Livrer uniquement les fichiers modifiés.
+
