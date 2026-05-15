@@ -2,6 +2,54 @@
 
 Ce guide explique quoi modifier, où, et pourquoi.
 
+---
+
+## NOUVEAU — Gestion via Excel (recommandé)
+
+Depuis la version 8, un fichier Excel centralisé permet de tout gérer sans toucher au code.
+
+### Fichier : `admin.xlsx`
+
+13 onglets, un type de données par onglet. Ouvrir dans Excel, modifier, sauvegarder, pousser sur GitHub — c'est tout.
+
+| Onglet | Ce qu'on modifie |
+|---|---|
+| Config | Nom du site, contact, réseaux sociaux, modal billetterie |
+| Navigation | Liens du menu |
+| Events | Événements (dates, statuts, images, liens…) |
+| Event_Descriptions | Textes longs FR/EN par événement |
+| Event_Meta | Infos pratiques (Format, Durée, Lieu…) |
+| Event_Tags | Tags/badges d'un événement |
+| Event_Artists | Line-up d'artistes |
+| Sponsors | Partenaires, logos, liens |
+| Artists_Cartes | Carrousel artistes homepage |
+| Artists_Bande | Bande de texte défilant |
+| Galeries | Paramètres des galeries |
+| Galerie_Images | Photos dans chaque galerie |
+
+**Convention dans les cellules :**
+- `OUI` = vrai, `NON` = faux
+- Cellule vide = champ non renseigné
+- Plusieurs images : `uploads/a.jpg ; uploads/b.jpg` (séparer par `;`)
+
+### Synchronisation automatique via GitHub Actions
+
+**Dès qu'un push arrive sur `main` :**
+- `data/*.js` modifié → `admin.xlsx` se met à jour automatiquement
+- `admin.xlsx` modifié → `data/*.js` se mettent à jour automatiquement
+- Cloudflare Pages redéploie le site
+
+Il n'y a rien à lancer manuellement depuis GitHub. Tout est automatique.
+
+### Sur Windows en local (sans GitHub)
+
+| Fichier | Action |
+|---|---|
+| `init_excel.bat` | Recrée `admin.xlsx` depuis les JS actuels |
+| `update_site.bat` | Applique `admin.xlsx` → régénère les JS |
+
+---
+
 ## Règle principale
 
 Ne commencez pas par modifier les pages HTML.
@@ -495,3 +543,4 @@ Pour revenir en arrière, supprimer uniquement le bloc commençant par :
 ```css
 /* ── VISUAL CLEANUP / ALIGNEMENT DES BLOCS ───────────── */
 ```
+
