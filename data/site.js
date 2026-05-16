@@ -1,6 +1,6 @@
 // =====================================================
 // FICHIER GLOBAL DU SITE
-// Généré automatiquement par sync.py le 16/05/2026 05:00
+// Généré automatiquement par sync.py le 16/05/2026 05:02
 // Modifier via csv/config.csv et csv/navigation.csv
 // ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SITE.
@@ -40,6 +40,11 @@ window.BDE_SITE = {
     "noteEn": "The Dauphine association pack gives access to a reduced rate on presentation of your student card. Presale only."
   },
   "navigation": [
+    {
+      "label": "Événements",
+      "labelEn": "Events",
+      "href": "evenements.html"
+    },
     {
       "label": "Notre label",
       "labelEn": "Our Label",
