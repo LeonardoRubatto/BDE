@@ -1,8 +1,9 @@
 // =====================================================
 // ÉVÉNEMENTS
-// Généré automatiquement par sync.py le 15/05/2026 19:33
-// Pour modifier via Excel : admin.xlsx > onglets Events / Event_*
-// Ou modifier directement ce fichier (les deux sont compatibles).
+// Généré automatiquement par sync.py le 16/05/2026 04:50
+// Modifier via csv/events.csv, csv/event_descriptions.csv,
+// csv/event_meta.csv, csv/event_tags.csv, csv/event_artists.csv
+// ou directement dans ce fichier.
 // Ne pas renommer window.BDE_EVENTS.
 // =====================================================
 

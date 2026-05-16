@@ -1,8 +1,8 @@
 // =====================================================
 // GALERIES ET ALBUMS GOOGLE PHOTOS
-// Généré automatiquement par sync.py le 15/05/2026 19:33
-// Pour modifier via Excel : admin.xlsx > onglets Galeries / Galerie_Images
-// Ou modifier directement ce fichier (les deux sont compatibles).
+// Généré automatiquement par sync.py le 16/05/2026 04:50
+// Modifier via csv/galleries.csv et csv/gallery_images.csv
+// ou directement dans ce fichier.
 // Ne pas renommer window.BDE_GALLERIES.
 // =====================================================
 
