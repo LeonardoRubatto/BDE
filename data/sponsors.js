@@ -1,11 +1,24 @@
 // =====================================================
 // SPONSORS / PARTENAIRES
-// Généré automatiquement par sync.py le 16/05/2026 04:56
+// Généré automatiquement par sync.py le 16/05/2026 04:57
 // Modifier via csv/sponsors.csv ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SPONSORS.
 // =====================================================
 
 window.BDE_SPONSORS = [
+  {
+    "name": "Caisse d'Épargne",
+    "logo": "uploads/partners/logo-caisse-epargne.png",
+    "fallback": "",
+    "alt": "Caisse d'Épargne",
+    "url": "https://www.caisse-epargne.fr",
+    "category": "Banque",
+    "type": "Banque · Finance",
+    "typeEn": "Bank · Finance",
+    "linkLabel": "caisse-epargne.fr →",
+    "active": true,
+    "order": 1
+  },
   {
     "name": "Red Bull",
     "logo": "uploads/partners/logo-redbull.png",
