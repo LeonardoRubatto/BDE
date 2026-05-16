@@ -16,14 +16,16 @@ CSV  = ROOT / "csv"
 
 
 def read_csv(filename):
-    """Lit un CSV UTF-8 (avec ou sans BOM) et retourne les lignes sans l'en-tête."""
+    """Lit un CSV UTF-8 (avec ou sans BOM) et retourne les lignes sans l'en-tête.
+    Les lignes dont la première cellule commence par ## sont des lignes de description
+    et sont ignorées (elles servent uniquement de guide dans le tableur)."""
     path = CSV / filename
     if not path.exists():
         print(f"  AVERTISSEMENT : csv/{filename} introuvable")
         return []
     with open(path, newline="", encoding="utf-8-sig") as f:
         rows = list(csv.reader(f))
-    return rows[1:] if len(rows) > 1 else []
+    return [r for r in rows[1:] if not (r and str(r[0]).startswith("##"))]
 
 
 def sv(val, default=""):

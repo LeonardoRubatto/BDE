@@ -60,43 +60,45 @@ def main():
 
     # ── config.csv ───────────────────────────────────────────────
     ticket = site.get("ticket") or {}
-    rows = [["CHAMP", "VALEUR", "DESCRIPTION"]]
+    rows = [["CHAMP", "VALEUR", "DESCRIPTION (impact sur le site)"]]
     rows += [
-        ["siteName",              s(site.get("siteName")),               "Nom du site"],
-        ["university",            s(site.get("university")),             "Nom de l'université"],
-        ["year",                  s(site.get("year")),                   "Année en cours"],
-        ["seasonLabel",           s(site.get("seasonLabel")),            "Libellé de saison"],
-        ["email",                 s(site.get("email")),                  "Email de contact"],
-        ["phone",                 s(site.get("phone")),                  "Téléphone affiché"],
-        ["phoneHref",             s(site.get("phoneHref")),              "Téléphone sans espaces pour les liens"],
-        ["address",               s(site.get("address")),                "Adresse complète"],
-        ["logo",                  s(site.get("logo")),                   "Chemin du logo"],
-        ["footerDescription",     s(site.get("footerDescription")),      "Description footer FR"],
-        ["footerDescriptionEn",   s(site.get("footerDescriptionEn")),    "Description footer EN"],
-        ["instagramUrl",          s(site.get("instagramUrl")),           "Lien Instagram BDE"],
-        ["instagramLabel",        s(site.get("instagramLabel")),         "Label Instagram BDE"],
-        ["nuitsInstagramUrl",     s(site.get("nuitsInstagramUrl")),      "Lien Instagram Nuits"],
-        ["nuitsInstagramLabel",   s(site.get("nuitsInstagramLabel")),    "Label Instagram Nuits"],
-        ["tiktokUrl",             s(site.get("tiktokUrl")),              "Lien TikTok"],
-        ["facebookUrl",           s(site.get("facebookUrl")),            "Lien Facebook"],
-        ["defaultTicketUrl",      s(site.get("defaultTicketUrl")),       "Lien billetterie générique"],
-        ["defaultGooglePhotosUrl",s(site.get("defaultGooglePhotosUrl")), "Lien Google Photos générique"],
-        ["copyrightText",         s(site.get("copyrightText")),          "Texte copyright"],
-        ["ticket_eventName",      s(ticket.get("eventName")),            "Nom événement modal billetterie"],
-        ["ticket_eventSub",       s(ticket.get("eventSub")),             "Sous-titre modal FR"],
-        ["ticket_eventSubEn",     s(ticket.get("eventSubEn")),           "Sous-titre modal EN"],
-        ["ticket_url",            s(ticket.get("url")),                  "URL billetterie"],
-        ["ticket_buttonLabel",    s(ticket.get("buttonLabel")),          "Texte bouton FR"],
-        ["ticket_buttonLabelEn",  s(ticket.get("buttonLabelEn")),        "Texte bouton EN"],
-        ["ticket_description",    s(ticket.get("description")),          "Description billetterie FR"],
-        ["ticket_descriptionEn",  s(ticket.get("descriptionEn")),        "Description billetterie EN"],
-        ["ticket_note",           s(ticket.get("note")),                 "Note billetterie FR"],
-        ["ticket_noteEn",         s(ticket.get("noteEn")),               "Note billetterie EN"],
+        ["## Nom du champ (ne pas modifier)", "Valeur à modifier", "Explication de l'impact sur le site"],
+        ["siteName",              s(site.get("siteName")),               "Affiché dans l'onglet du navigateur et le titre de chaque page"],
+        ["university",            s(site.get("university")),             "Nom de l'université affiché dans le footer"],
+        ["year",                  s(site.get("year")),                   "Année affichée dans le footer et le copyright"],
+        ["seasonLabel",           s(site.get("seasonLabel")),            "Libellé de saison affiché dans le footer (ex: Saison 2025-2026)"],
+        ["email",                 s(site.get("email")),                  "Email de contact affiché sur la page Contact"],
+        ["phone",                 s(site.get("phone")),                  "Téléphone affiché sur la page Contact"],
+        ["phoneHref",             s(site.get("phoneHref")),              "Téléphone sans espaces pour les liens cliquables (tel:+33...)"],
+        ["address",               s(site.get("address")),                "Adresse affichée sur la page Contact"],
+        ["logo",                  s(site.get("logo")),                   "Chemin du logo affiché dans le header et le footer"],
+        ["footerDescription",     s(site.get("footerDescription")),      "Texte de présentation affiché dans le footer en français"],
+        ["footerDescriptionEn",   s(site.get("footerDescriptionEn")),    "Texte de présentation affiché dans le footer en anglais"],
+        ["instagramUrl",          s(site.get("instagramUrl")),           "Lien Instagram BDE — bouton dans le footer et page Contact"],
+        ["instagramLabel",        s(site.get("instagramLabel")),         "Texte affiché pour le lien Instagram BDE"],
+        ["nuitsInstagramUrl",     s(site.get("nuitsInstagramUrl")),      "Lien Instagram Nuits Dauphine — affiché sur la page Notre Label"],
+        ["nuitsInstagramLabel",   s(site.get("nuitsInstagramLabel")),    "Texte affiché pour le lien Instagram Nuits"],
+        ["tiktokUrl",             s(site.get("tiktokUrl")),              "Lien TikTok — bouton dans le footer et page Contact"],
+        ["facebookUrl",           s(site.get("facebookUrl")),            "Lien Facebook — bouton dans le footer et page Contact"],
+        ["defaultTicketUrl",      s(site.get("defaultTicketUrl")),       "Lien billetterie générique utilisé si un événement n'a pas son propre lien"],
+        ["defaultGooglePhotosUrl",s(site.get("defaultGooglePhotosUrl")), "Lien Google Photos générique utilisé si une galerie n'a pas son propre album"],
+        ["copyrightText",         s(site.get("copyrightText")),          "Texte copyright affiché en bas du footer"],
+        ["ticket_eventName",      s(ticket.get("eventName")),            "Nom de l'événement affiché dans le modal billetterie (popup bouton Billets)"],
+        ["ticket_eventSub",       s(ticket.get("eventSub")),             "Sous-titre du modal billetterie en français"],
+        ["ticket_eventSubEn",     s(ticket.get("eventSubEn")),           "Sous-titre du modal billetterie en anglais"],
+        ["ticket_url",            s(ticket.get("url")),                  "URL Shotgun ou autre billetterie — lien du bouton principal du modal"],
+        ["ticket_buttonLabel",    s(ticket.get("buttonLabel")),          "Texte du bouton billetterie en français (ex: Prendre ma place)"],
+        ["ticket_buttonLabelEn",  s(ticket.get("buttonLabelEn")),        "Texte du bouton billetterie en anglais"],
+        ["ticket_description",    s(ticket.get("description")),          "Description affichée dans le modal billetterie en français"],
+        ["ticket_descriptionEn",  s(ticket.get("descriptionEn")),        "Description affichée dans le modal billetterie en anglais"],
+        ["ticket_note",           s(ticket.get("note")),                 "Note informative dans le modal billetterie en français (ex: tarif réduit)"],
+        ["ticket_noteEn",         s(ticket.get("noteEn")),               "Note informative dans le modal billetterie en anglais"],
     ]
     write_csv("config.csv", rows)
 
     # ── navigation.csv ───────────────────────────────────────────
     rows = [["ORDRE", "LABEL FR", "LABEL EN", "HREF", "LIEN HORS HOME"]]
+    rows.append(["## Position (1=premier lien du menu)", "Texte du lien affiché en français", "Texte du lien affiché en anglais", "URL de destination (fichier HTML ou lien externe)", "Si renseigné : ce lien s'ouvre dans un nouvel onglet quand on n'est pas sur la homepage"])
     for i, nav in enumerate(site.get("navigation") or [], 1):
         rows.append([i, s(nav.get("label")), s(nav.get("labelEn")),
                      s(nav.get("href")), s(nav.get("externalFromNonHome"))])
@@ -116,6 +118,45 @@ def main():
         "SUR HOME (OUI/NON)", "SUR ÉVÉNEMENTS (OUI/NON)", "SUR PAGE NUITS (OUI/NON)",
         "FEATURED (OUI/NON)", "STATUS", "REVERSE (OUI/NON)",
     ]]
+    rows.append([
+        "## Identifiant unique interne (ne jamais modifier)",
+        "Ordre d'affichage dans les listes",
+        "Numéro affiché visuellement sur la carte (ex: 01)",
+        "Titre de l'événement — affiché sur la homepage, page événements et page dédiée",
+        "Sous-titre affiché sur la page de l'événement",
+        "Catégorie interne (non affichée sur le site)",
+        "Date technique ISO pour le tri (ex: 2026-02-12)",
+        "Date affichée sur la homepage en français (ex: 12 février 2026)",
+        "Date affichée sur la homepage en anglais",
+        "Statut affiché à la place de la date en français (ex: En vente, Passé, À venir)",
+        "Statut affiché en anglais",
+        "Couleur du statut : 'red' pour rouge — laissez vide sinon",
+        "Lieu général affiché dans les infos pratiques (ville, espace)",
+        "Salle précise affichée dans les infos pratiques",
+        "Texte court affiché sous le titre sur la page événements",
+        "Texte de description affiché sur la carte homepage en français",
+        "Texte de description affiché sur la carte homepage en anglais",
+        "Période affichée sur la carte homepage en français (ex: Annuel, Mensuel)",
+        "Période affichée sur la carte homepage en anglais",
+        "Photo principale — affichée sur la homepage et en haut de la page événement",
+        "Photos supplémentaires pour le carrousel de la page événement — séparées par ;",
+        "Texte alternatif de l'image (pour l'accessibilité et le SEO)",
+        "Lien billetterie spécifique à cet événement (Shotgun, etc.)",
+        "Texte affiché sur le bouton billetterie",
+        "Lien vers le dossier de présentation de l'événement",
+        "Texte du bouton dossier en français",
+        "Texte du bouton dossier en anglais",
+        "OUI = téléchargement direct du dossier / NON = ouverture dans l'onglet",
+        "Lien vers l'album Google Photos complet de cet événement",
+        "Nom du fichier HTML de la galerie associée (ex: galerie-begins.html)",
+        "Nom affiché pour le bouton vers la galerie",
+        "OUI = carte visible sur la homepage",
+        "OUI = visible sur la page Événements",
+        "OUI = visible sur la page Notre Label (Nuits Dauphine)",
+        "OUI = mis en avant visuellement sur la page événements (grande carte)",
+        "Statut technique interne",
+        "OUI = inverser l'ordre texte/image sur la carte homepage",
+    ])
     for ev in events:
         dl   = ev.get("dateLabel")          or {}
         sl   = ev.get("statusLabel")        or {}
@@ -145,6 +186,7 @@ def main():
 
     # ── event_descriptions.csv ───────────────────────────────────
     rows = [["SLUG ÉVÉNEMENT", "ORDRE", "TEXTE FR", "TEXTE EN"]]
+    rows.append(["## Slug de l'événement concerné (doit correspondre à la colonne SLUG d'events.csv)", "Ordre d'affichage du paragraphe (1, 2, 3...)", "Paragraphe de description long affiché en français sur la page de l'événement", "Traduction en anglais du même paragraphe"])
     for ev in events:
         for k, block in enumerate(ev.get("descriptionBlocks") or [], 1):
             i18n = block.get("i18n") or {}
@@ -154,6 +196,7 @@ def main():
 
     # ── event_meta.csv ───────────────────────────────────────────
     rows = [["SLUG ÉVÉNEMENT", "ORDRE", "CLÉ FR", "CLÉ EN", "VALEUR FR", "VALEUR EN"]]
+    rows.append(["## Slug de l'événement concerné", "Ordre d'affichage de la ligne dans le tableau d'infos", "Label affiché en français dans les infos pratiques (ex: Format, Durée, Prix, Lieu)", "Label affiché en anglais", "Valeur affichée en français (ex: Soirée, 6h, 15€, Paris)", "Valeur affichée en anglais"])
     for ev in events:
         for k, meta in enumerate(ev.get("meta") or [], 1):
             ki = meta.get("keyI18n")   or {}
@@ -165,6 +208,7 @@ def main():
 
     # ── event_tags.csv ───────────────────────────────────────────
     rows = [["SLUG ÉVÉNEMENT", "ORDRE", "LABEL", "ROUGE (OUI/NON)", "LABEL FR", "LABEL EN"]]
+    rows.append(["## Slug de l'événement concerné", "Ordre d'affichage du badge", "Texte du badge (utilisé si pas de traduction)", "OUI = badge affiché en rouge sur la page événement", "Texte du badge en français affiché sur la page de l'événement", "Texte du badge en anglais"])
     for ev in events:
         for k, tag in enumerate(ev.get("tags") or [], 1):
             i18n = tag.get("i18n") or {}
@@ -175,6 +219,7 @@ def main():
 
     # ── event_artists.csv ────────────────────────────────────────
     rows = [["SLUG ÉVÉNEMENT", "ORDRE", "LABEL", "MIS EN AVANT (OUI/NON)"]]
+    rows.append(["## Slug de l'événement concerné", "Ordre dans le line-up affiché sur la page de l'événement", "Nom de l'artiste affiché dans la liste du line-up", "OUI = nom affiché en gras / mis en valeur visuellement dans le line-up"])
     for ev in events:
         for k, art in enumerate(ev.get("artists") or [], 1):
             rows.append([s(ev.get("slug")), k, s(art.get("label")), b(art.get("highlight", False))])
@@ -183,6 +228,7 @@ def main():
     # ── sponsors.csv ─────────────────────────────────────────────
     rows = [["NOM", "LOGO", "FALLBACK", "ALT", "URL",
              "CATÉGORIE", "TYPE FR", "TYPE EN", "LIEN LABEL", "ACTIF (OUI/NON)", "ORDRE"]]
+    rows.append(["## Nom du sponsor affiché sur la page Partenaires et la homepage", "Chemin de l'image du logo (uploads/partners/...)", "Initiales affichées à la place du logo si le fichier est absent", "Texte alternatif de l'image (accessibilité et SEO)", "Lien vers le site du sponsor — s'ouvre au clic sur le logo", "Catégorie interne pour regroupement visuel", "Description du partenariat affichée en français (ex: Partenaire bancaire)", "Description du partenariat affichée en anglais", "Texte du lien affiché sous le logo (ex: Visiter le site)", "OUI = logo affiché / NON = masqué sans être supprimé", "Position dans la liste (plus petit = affiché en premier)"])
     for sp in sponsors:
         rows.append([s(sp.get("name")), s(sp.get("logo")), s(sp.get("fallback")),
                      s(sp.get("alt")), s(sp.get("url")), s(sp.get("category")),
@@ -193,6 +239,7 @@ def main():
     # ── artists_cartes.csv ───────────────────────────────────────
     rows = [["NOM", "IMAGE", "ALT", "ANNÉE · ÉVÉNEMENT", "TEXTE ÉVÉNEMENT",
              "BADGE", "FEATURED (OUI/NON)", "ACTIF (OUI/NON)", "ORDRE"]]
+    rows.append(["## Nom de l'artiste affiché sur la carte du carrousel homepage", "Chemin de la photo de l'artiste (uploads/...)", "Texte alternatif de l'image", "Texte affiché sur la carte sous le nom (ex: 2025 · How We Dau)", "Texte secondaire affiché sur la carte (nom de l'événement)", "Badge affiché sur la carte (ex: Headliner, Live, Exclusif)", "OUI = carte visuellement mise en avant dans le carrousel", "OUI = carte visible dans le carrousel homepage / NON = masquée", "Position dans le carrousel (plus petit = affiché en premier)"])
     for card in artists.get("cards") or []:
         rows.append([s(card.get("name")), s(card.get("image")), s(card.get("alt")),
                      s(card.get("yearEvent")), s(card.get("eventText")), s(card.get("badge")),
@@ -201,6 +248,7 @@ def main():
 
     # ── artists_bande.csv ────────────────────────────────────────
     rows = [["ORDRE", "NOM"]]
+    rows.append(["## Position dans la bande défilante (1=premier affiché)", "Nom de l'artiste affiché dans la bande de texte animée en homepage"])
     for i, name in enumerate(artists.get("textStrip") or [], 1):
         rows.append([i, s(name)])
     write_csv("artists_bande.csv", rows)
@@ -208,6 +256,7 @@ def main():
     # ── galleries.csv ────────────────────────────────────────────
     rows = [["SLUG", "TITRE", "PAGE HTML", "SLUG ÉVÉNEMENT LIÉ",
              "IMAGE COUVERTURE", "GOOGLE PHOTOS URL", "MODE LIGHTBOX", "ACTIF (OUI/NON)", "ORDRE"]]
+    rows.append(["## Identifiant unique de la galerie (ne jamais modifier)", "Nom de la galerie affiché sur la page et dans le bouton de la page événement", "Nom du fichier HTML de la galerie (ex: galerie-begins.html)", "Slug de l'événement lié — affiche un bouton vers la galerie sur la page événement", "Photo de couverture affichée sur la page événement et dans la bande photos de la homepage", "Lien vers l'album complet Google Photos", "overlay = photos s'ouvrent en plein écran sur le site / link = redirige vers Google Photos", "OUI = galerie visible + photo de couverture dans la bande homepage / NON = masquée", "Ordre d'affichage"])
     for gal in galleries:
         rows.append([s(gal.get("slug")), s(gal.get("title")), s(gal.get("page")),
                      s(gal.get("eventSlug")), s(gal.get("coverImage")),
@@ -218,6 +267,7 @@ def main():
     # ── gallery_images.csv ───────────────────────────────────────
     rows = [["SLUG GALERIE", "ORDRE", "SRC", "ALT",
              "LÉGENDE FR", "LÉGENDE EN", "TAG FR", "TAG EN"]]
+    rows.append(["## Identifiant de la galerie concernée (doit correspondre à la colonne SLUG de galleries.csv)", "Ordre d'affichage dans la galerie (1=première photo)", "Chemin de la photo depuis la racine du site (ex: uploads/photo.jpg)", "Texte alternatif pour l'accessibilité et le SEO", "Légende affichée sous la photo en français (visible en mode lightbox)", "Légende affichée sous la photo en anglais", "Badge/tag affiché sur la miniature en français (ex: Gala · 2026)", "Badge/tag affiché sur la miniature en anglais"])
     for gal in galleries:
         for k, img in enumerate(gal.get("images") or [], 1):
             ci = img.get("captionI18n") or {}
