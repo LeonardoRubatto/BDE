@@ -1,6 +1,6 @@
 // =====================================================
 // ARTISTES / SHOWCASES
-// Généré automatiquement par sync.py le 16/05/2026 04:50
+// Généré automatiquement par sync.py le 16/05/2026 04:55
 // Modifier via csv/artists_cartes.csv et csv/artists_bande.csv
 // ou directement dans ce fichier.
 // Ne pas renommer window.BDE_ARTISTS.
@@ -87,7 +87,7 @@ window.BDE_ARTISTS = {
     }
   ],
   "textStrip": [
-    "KAKAKAKKAKAKA",
+    "Gazo",
     "Maître Gims",
     "SCH",
     "Laylow",
