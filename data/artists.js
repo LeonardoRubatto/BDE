@@ -1,6 +1,6 @@
 // =====================================================
 // ARTISTES / SHOWCASES
-// Généré automatiquement par sync.py le 15/05/2026 19:33
+// Généré automatiquement par sync.py le 16/05/2026 04:23
 // Pour modifier via Excel : admin.xlsx > onglets Artists_Cartes / Artists_Bande
 // Ou modifier directement ce fichier (les deux sont compatibles).
 // Ne pas renommer window.BDE_ARTISTS.
