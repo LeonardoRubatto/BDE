@@ -4,39 +4,38 @@ Ce guide explique quoi modifier, où, et pourquoi.
 
 ---
 
-## NOUVEAU — Gestion via Excel (recommandé)
+## Gestion via tableur CSV (recommandé pour les non-techniques)
 
-Depuis la version 8, un fichier Excel centralisé permet de tout gérer sans toucher au code.
+Le dossier `csv/` contient 12 fichiers CSV — un type de données par fichier.  
+Ouvrir dans Excel ou Google Sheets, modifier, sauvegarder, pousser sur GitHub — c'est tout.
 
-### Fichier : `admin.xlsx`
-
-13 onglets, un type de données par onglet. Ouvrir dans Excel, modifier, sauvegarder, pousser sur GitHub — c'est tout.
-
-| Onglet | Ce qu'on modifie |
+| Fichier CSV | Ce qu'on modifie |
 |---|---|
-| Config | Nom du site, contact, réseaux sociaux, modal billetterie |
-| Navigation | Liens du menu |
-| Events | Événements (dates, statuts, images, liens…) |
-| Event_Descriptions | Textes longs FR/EN par événement |
-| Event_Meta | Infos pratiques (Format, Durée, Lieu…) |
-| Event_Tags | Tags/badges d'un événement |
-| Event_Artists | Line-up d'artistes |
-| Sponsors | Partenaires, logos, liens |
-| Artists_Cartes | Carrousel artistes homepage |
-| Artists_Bande | Bande de texte défilant |
-| Galeries | Paramètres des galeries |
-| Galerie_Images | Photos dans chaque galerie |
+| `config.csv` | Nom du site, contact, réseaux sociaux, modal billetterie |
+| `navigation.csv` | Liens du menu |
+| `events.csv` | Événements (dates, statuts, images, liens…) |
+| `event_descriptions.csv` | Textes longs FR/EN par événement |
+| `event_meta.csv` | Infos pratiques (Format, Durée, Lieu…) |
+| `event_tags.csv` | Tags/badges d'un événement |
+| `event_artists.csv` | Line-up d'artistes |
+| `sponsors.csv` | Partenaires, logos, liens |
+| `artists_cartes.csv` | Carrousel artistes homepage |
+| `artists_bande.csv` | Bande de texte défilant |
+| `galleries.csv` | Paramètres des galeries |
+| `gallery_images.csv` | Photos dans chaque galerie |
 
 **Convention dans les cellules :**
 - `OUI` = vrai, `NON` = faux
 - Cellule vide = champ non renseigné
 - Plusieurs images : `uploads/a.jpg ; uploads/b.jpg` (séparer par `;`)
 
+**Photos :** JPG uniquement, max 500 KB, max 1920 px. Les photos trop lourdes ne chargent pas sur iPhone.
+
 ### Synchronisation automatique via GitHub Actions
 
 **Dès qu'un push arrive sur `main` :**
-- `data/*.js` modifié → `admin.xlsx` se met à jour automatiquement
-- `admin.xlsx` modifié → `data/*.js` se mettent à jour automatiquement
+- `data/*.js` modifié → les CSV se mettent à jour automatiquement
+- Un CSV modifié → `data/*.js` se mettent à jour automatiquement
 - Cloudflare Pages redéploie le site
 
 Il n'y a rien à lancer manuellement depuis GitHub. Tout est automatique.
@@ -45,8 +44,8 @@ Il n'y a rien à lancer manuellement depuis GitHub. Tout est automatique.
 
 | Fichier | Action |
 |---|---|
-| `init_excel.bat` | Recrée `admin.xlsx` depuis les JS actuels |
-| `update_site.bat` | Applique `admin.xlsx` → régénère les JS |
+| `init_excel.bat` | Recrée les CSV depuis les JS actuels |
+| `update_site.bat` | Applique les CSV → régénère les JS |
 
 ---
 
@@ -543,4 +542,3 @@ Pour revenir en arrière, supprimer uniquement le bloc commençant par :
 ```css
 /* ── VISUAL CLEANUP / ALIGNEMENT DES BLOCS ───────────── */
 ```
-
