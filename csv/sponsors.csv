@@ -1,4 +1,5 @@
 ﻿NOM,LOGO,FALLBACK,ALT,URL,CATÉGORIE,TYPE FR,TYPE EN,LIEN LABEL,ACTIF (OUI/NON),ORDRE
+Caisse d'Épargne,uploads/partners/logo-caisse-epargne.png,,Caisse d'Épargne,https://www.caisse-epargne.fr,Banque,Banque · Finance,Bank · Finance,caisse-epargne.fr →,OUI,1
 Red Bull,uploads/partners/logo-redbull.png,RB,Red Bull,https://www.redbull.com/fr-fr/,Boisson,Boisson · Énergie,Drink · Energy,redbull.com →,OUI,2
 Uber,uploads/partners/logo-uber.png,UB,Uber,https://www.uber.com/fr/fr/,Mobilité,Mobilité · VTC,Mobility · Ride-hailing,uber.com →,OUI,3
 YouStock,uploads/partners/logo-youstock.png,,YouStock,https://www.youstock.com,Stockage,Stockage · Logistique,Storage · Logistics,youstock.com →,OUI,4
