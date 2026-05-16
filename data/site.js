@@ -1,6 +1,6 @@
 // =====================================================
 // FICHIER GLOBAL DU SITE
-// Généré automatiquement par sync.py le 16/05/2026 05:02
+// Généré automatiquement par sync.py le 16/05/2026 05:06
 // Modifier via csv/config.csv et csv/navigation.csv
 // ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SITE.
@@ -10,7 +10,7 @@ window.BDE_SITE = {
   "siteName": "BDE Dauphine",
   "university": "Paris Dauphine-PSL",
   "year": "2026",
-  "seasonLabel": "Saison 2025-2026",
+  "seasonLabel": "Saison 2026-2027",
   "email": "bdedauphine@gmail.com",
   "phone": "06 03 35 68 22",
   "phoneHref": "0603356822",
