@@ -1,6 +1,6 @@
 // =====================================================
 // SPONSORS / PARTENAIRES
-// Généré automatiquement par sync.py le 16/05/2026 04:25
+// Généré automatiquement par sync.py le 15/05/2026 19:33
 // Pour modifier via Excel : admin.xlsx > onglet Sponsors
 // Ou modifier directement ce fichier (les deux sont compatibles).
 // Ne pas renommer window.BDE_SPONSORS.

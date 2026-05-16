@@ -1,0 +1,11 @@
+﻿NOM,LOGO,FALLBACK,ALT,URL,CATÉGORIE,TYPE FR,TYPE EN,LIEN LABEL,ACTIF (OUI/NON),ORDRE
+Caisse d'Épargne,uploads/partners/logo-caisse-epargne.png,,Caisse d'Épargne,https://www.caisse-epargne.fr,Banque,Banque · Finance,Bank · Finance,caisse-epargne.fr →,OUI,1
+Red Bull,uploads/partners/logo-redbull.png,RB,Red Bull,https://www.redbull.com/fr-fr/,Boisson,Boisson · Énergie,Drink · Energy,redbull.com →,OUI,2
+Uber,uploads/partners/logo-uber.png,UB,Uber,https://www.uber.com/fr/fr/,Mobilité,Mobilité · VTC,Mobility · Ride-hailing,uber.com →,OUI,3
+YouStock,uploads/partners/logo-youstock.png,,YouStock,https://www.youstock.com,Stockage,Stockage · Logistique,Storage · Logistics,youstock.com →,OUI,4
+Lydia / Sumeria,uploads/partners/logo-sumeria.png,,Lydia / Sumeria,https://sumeria.eu,Fintech,Fintech · Paiement,Fintech · Payment,sumeria.eu →,OUI,5
+Cercles de la Forme,uploads/partners/logo-cercles-forme.png,,Cercles de la Forme,https://www.cerclesdelaforme.com,Sport & bien-être,Sport · Bien-être,Sport · Wellness,cerclesdelaforme.com →,OUI,6
+Prépa Parisiennes,,PP,Prépa Parisiennes,https://www.preparisiennes.com,Formation,Formation · Orientation,Education · Guidance,preparisiennes.com →,OUI,7
+Admissions Parallèles,uploads/partners/logo-admissions-paralleles.png,,Admissions Parallèles,https://www.admissionsparalleles.com,Orientation,Orientation · Admissions,Guidance · Admissions,admissionsparalleles.com →,OUI,8
+En Voiture Simone,uploads/partners/logo-en-voiture-simone.png,,En Voiture Simone,https://www.envoituresimone.com,Mobilité,Mobilité · Auto-école,Mobility · Driving School,envoituresimone.com →,OUI,9
+Smart Renting,,SR,Smart Renting,https://smart-renting.com,Immobilier étudiant,Immobilier · Étudiant,Real Estate · Student,smart-renting.com →,OUI,10
