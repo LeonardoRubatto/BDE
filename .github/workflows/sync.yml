@@ -15,8 +15,8 @@ on:
 
 jobs:
   sync:
-    # Ne pas s'exécuter si le commit a été créé par ce même workflow
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    # Ne pas s'exécuter si le commit a été créé par ce même workflow (le bot)
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     permissions:
@@ -79,7 +79,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Déjà synchronisé — rien à committer."
           else
-            git commit -m "sync: auto-synchronisation [skip ci]"
+            git commit -m "sync: auto-synchronisation"
             git push
             echo "Push effectué."
           fi
