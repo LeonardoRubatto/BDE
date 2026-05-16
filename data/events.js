@@ -1,6 +1,6 @@
 // =====================================================
 // ÉVÉNEMENTS
-// Généré automatiquement par sync.py le 16/05/2026 04:23
+// Généré automatiquement par sync.py le 16/05/2026 04:25
 // Pour modifier via Excel : admin.xlsx > onglets Events / Event_*
 // Ou modifier directement ce fichier (les deux sont compatibles).
 // Ne pas renommer window.BDE_EVENTS.
@@ -1040,7 +1040,9 @@ window.BDE_EVENTS = [
     ],
     "image": "uploads/DSC04433-scaled.jpg",
     "images": [
-      "uploads/DSC04433-scaled.jpg"
+      "uploads/DSC04433-scaled.jpg",
+      "uploads/DSC04743-scaled.jpg",
+      "uploads/DSC04627-scaled.jpg"
     ],
     "alt": "Dauph'End",
     "ticketUrl": "",
