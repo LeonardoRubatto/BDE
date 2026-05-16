@@ -16,16 +16,16 @@ Le site est **100 % statique** — aucun CMS, aucune base de données, aucun bac
 Les pages HTML sont générées visuellement depuis des fichiers JavaScript dans `data/`.
 
 ```
-data/site.js       → config globale (nom, contact, réseaux, nav, footer, billetterie)
-data/events.js     → événements, dates, statuts, textes, images, galeries
-data/sponsors.js   → partenaires, logos, liens, ordre
-data/galleries.js  → galeries photos, légendes, albums Google Photos
-data/artists.js    → artistes du carrousel homepage
+data/site.js           →  config globale (nom, contact, réseaux, nav, footer, billetterie)
+data/events.js         →  événements, dates, statuts, textes, images, galeries
+data/sponsors.js       →  partenaires, logos, liens, ordre
+data/galleries.js      →  galeries photos, légendes, albums Google Photos
+data/artists.js        →  artistes du carrousel homepage
 
-js/render.js       → moteur de rendu (lit data/, injecte dans le HTML)
-js/components.js   → composants communs (nav, footer, modal, sponsors)
-js/main.js         → point d'entrée
-style.css          → design global
+js/render.js           →  moteur de rendu (lit data/, injecte dans le HTML)
+js/components.js       →  composants communs (nav, footer, modal, sponsors)
+js/main.js             →  point d'entrée
+style.css              →  design global
 ```
 
 ---
@@ -36,29 +36,29 @@ style.css          → design global
 La méthode la plus directe. Modifier le fichier, pousser sur GitHub.  
 La sync se fait automatiquement (voir ci-dessous).
 
-### Niveau 2 — Modifier via Excel (`admin.xlsx`)
-Plus convivial. Ouvrir `admin.xlsx`, modifier dans les onglets, pousser sur GitHub.  
-Chaque onglet correspond à un type de données :
+### Niveau 2 — Modifier via tableur CSV (`csv/`)
+Plus convivial pour les non-techniques. 12 fichiers CSV dans `csv/`, un type de données par fichier.  
+Ouvrir dans Excel ou Google Sheets, modifier, sauvegarder, pousser sur GitHub.
 
-| Onglet | Contenu |
+| Fichier CSV | Contenu |
 |---|---|
-| Config | Paramètres globaux du site |
-| Navigation | Liens du menu |
-| Events | Événements (champs principaux) |
-| Event_Descriptions | Paragraphes de description par événement |
-| Event_Meta | Métadonnées affichées par événement |
-| Event_Tags | Tags/badges par événement |
-| Event_Artists | Artistes liés à un événement |
-| Sponsors | Partenaires |
-| Artists_Cartes | Carrousel artistes homepage |
-| Artists_Bande | Bande de texte défilant |
-| Galeries | Galeries photos |
-| Galerie_Images | Photos par galerie |
+| `config.csv` | Paramètres globaux du site |
+| `navigation.csv` | Liens du menu |
+| `events.csv` | Événements (champs principaux) |
+| `event_descriptions.csv` | Paragraphes de description par événement |
+| `event_meta.csv` | Métadonnées affichées par événement |
+| `event_tags.csv` | Tags/badges par événement |
+| `event_artists.csv` | Artistes liés à un événement |
+| `sponsors.csv` | Partenaires |
+| `artists_cartes.csv` | Carrousel artistes homepage |
+| `artists_bande.csv` | Bande de texte défilant |
+| `galleries.csv` | Galeries photos |
+| `gallery_images.csv` | Photos par galerie |
 
 ### Niveau 3 — Automatique via GitHub Actions
 **Dès qu'un push est détecté sur `main` :**
-- Si `data/*.js` a changé → `admin.xlsx` est mis à jour automatiquement
-- Si `admin.xlsx` a changé → `data/*.js` sont mis à jour automatiquement
+- Si `data/*.js` a changé → les CSV sont mis à jour automatiquement
+- Si un CSV a changé → `data/*.js` sont mis à jour automatiquement
 - Cloudflare Pages redéploie ensuite le site avec les données à jour
 
 Les deux sources sont toujours synchronisées. Il n'y a rien à lancer manuellement.
@@ -83,20 +83,20 @@ Puis ouvrir `http://localhost:8000`
 
 ## Workflow quotidien
 
-**Modifier via Excel (méthode recommandée pour les non-techniques) :**
-1. Ouvrir `admin.xlsx` depuis le dépôt (ou le télécharger)
-2. Modifier les données dans les onglets concernés
+**Modifier via tableur (méthode recommandée pour les non-techniques) :**
+1. Ouvrir un fichier dans `csv/` (Excel ou Google Sheets)
+2. Modifier les données
 3. Sauvegarder et pousser sur GitHub
 4. GitHub Actions met à jour `data/*.js` → Cloudflare redéploie
 
 **Modifier directement un fichier `data/*.js` :**
 1. Éditer le fichier dans `data/`
 2. Pousser sur GitHub
-3. GitHub Actions met à jour `admin.xlsx` → Cloudflare redéploie
+3. GitHub Actions met à jour les CSV → Cloudflare redéploie
 
 **Sur Windows sans GitHub (local seulement) :**
-- `init_excel.bat` : recrée `admin.xlsx` depuis les JS actuels
-- `update_site.bat` : applique `admin.xlsx` vers les JS
+- `init_excel.bat` : recrée les CSV depuis les JS actuels
+- `update_site.bat` : applique les CSV → régénère les JS
 
 ---
 
@@ -107,7 +107,7 @@ Puis ouvrir `http://localhost:8000`
 
 ---
 
-## Convention dans admin.xlsx
+## Convention dans les CSV
 
 | Valeur | Signification |
 |---|---|
@@ -115,6 +115,16 @@ Puis ouvrir `http://localhost:8000`
 | `NON` | false |
 | *(cellule vide)* | chaîne vide / non défini |
 | `a.jpg ; b.jpg` | liste de chemins séparés par `;` |
+
+---
+
+## Photos
+
+- Format : JPG uniquement
+- Taille max : 500 KB
+- Dimensions max : 1920 px (largeur ou hauteur)
+- Dossier : `uploads/` à la racine du projet
+- Sur iPhone, les photos trop lourdes ou trop grandes ne chargent pas
 
 ---
 
