@@ -1,4 +1,5 @@
 ﻿SLUG,TITRE,PAGE HTML,SLUG ÉVÉNEMENT LIÉ,IMAGE COUVERTURE,GOOGLE PHOTOS URL,MODE LIGHTBOX,ACTIF (OUI/NON),ORDRE
+## Identifiant unique de la galerie (ne jamais modifier),Nom de la galerie affiché sur la page et dans le bouton de la page événement,Nom du fichier HTML de la galerie (ex: galerie-begins.html),Slug de l'événement lié — affiche un bouton vers la galerie sur la page événement,Photo de couverture affichée sur la page événement et dans la bande photos de la homepage,Lien vers l'album complet Google Photos,overlay = photos s'ouvrent en plein écran sur le site / link = redirige vers Google Photos,OUI = galerie visible + photo de couverture dans la bande homepage / NON = masquée,Ordre d'affichage
 begins,Begin's,galerie-begins.html,begins,uploads/photos_now-1777708863357.jpg,https://photos.google.com/,overlay,OUI,1
 croisette,La Croisette,galerie-croisette.html,croisette,uploads/DSC04545-scaled.jpg,https://photos.google.com/,overlay,OUI,2
 dauphinend,Dauph'End,galerie-dauphinend.html,dauphinend,uploads/DSC04666-scaled.jpg,https://photos.google.com/,overlay,OUI,3

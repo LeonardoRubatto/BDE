@@ -1,31 +1,32 @@
-﻿CHAMP,VALEUR,DESCRIPTION
-siteName,BDE Dauphine,Nom du site
-university,Paris Dauphine-PSL,Nom de l'université
-year,2026,Année en cours
-seasonLabel,Saison 2026-2027,Libellé de saison
-email,bdedauphine@gmail.com,Email de contact
-phone,06 03 35 68 22,Téléphone affiché
-phoneHref,0603356822,Téléphone sans espaces pour les liens
-address,"Université Paris Dauphine-PSL, Place du Maréchal de Lattre de Tassigny, 75016 Paris",Adresse complète
-logo,uploads/logo-1777708303205.png,Chemin du logo
-footerDescription,Bureau des Étudiants de l'Université Paris Dauphine-PSL — Association loi 1901 à but non lucratif. La vie étudiante depuis 1979.,Description footer FR
-footerDescriptionEn,Student Union of Paris Dauphine-PSL University — Non-profit association. Student life since 1979.,Description footer EN
-instagramUrl,https://www.instagram.com/bdedauphine/,Lien Instagram BDE
-instagramLabel,Instagram @bdedauphine,Label Instagram BDE
-nuitsInstagramUrl,https://www.instagram.com/lesnuitsdauphine/,Lien Instagram Nuits
-nuitsInstagramLabel,@lesnuitsdauphine,Label Instagram Nuits
-tiktokUrl,https://www.tiktok.com/@bdedauphine,Lien TikTok
-facebookUrl,https://www.facebook.com/bdedauphine,Lien Facebook
-defaultTicketUrl,https://shotgun.live/fr,Lien billetterie générique
-defaultGooglePhotosUrl,https://photos.google.com/,Lien Google Photos générique
-copyrightText,© 2026 BDE Dauphine · Paris Dauphine-PSL · Association loi 1901,Texte copyright
-ticket_eventName,How We Dau 2026,Nom événement modal billetterie
-ticket_eventSub,Paris Dauphine-PSL · Prochainement,Sous-titre modal FR
-ticket_eventSubEn,Paris Dauphine-PSL · Coming soon,Sous-titre modal EN
-ticket_url,https://shotgun.live/fr,URL billetterie
-ticket_buttonLabel,Réserver sur Shotgun,Texte bouton FR
-ticket_buttonLabelEn,Book on Shotgun,Texte bouton EN
-ticket_description,Billetterie officielle — pack asso disponible,Description billetterie FR
-ticket_descriptionEn,Official ticketing — association pack available,Description billetterie EN
-ticket_note,Le pack asso Dauphine donne accès à un tarif réduit sur présentation de ta carte étudiante. Disponible en prévente uniquement.,Note billetterie FR
-ticket_noteEn,The Dauphine association pack gives access to a reduced rate on presentation of your student card. Presale only.,Note billetterie EN
+﻿CHAMP,VALEUR,DESCRIPTION (impact sur le site)
+## Nom du champ (ne pas modifier),Valeur à modifier,Explication de l'impact sur le site
+siteName,BDE Dauphine,Affiché dans l'onglet du navigateur et le titre de chaque page
+university,Paris Dauphine-PSL,Nom de l'université affiché dans le footer
+year,2026,Année affichée dans le footer et le copyright
+seasonLabel,Saison 2025-2026,Libellé de saison affiché dans le footer (ex: Saison 2025-2026)
+email,bdedauphine@gmail.com,Email de contact affiché sur la page Contact
+phone,06 03 35 68 22,Téléphone affiché sur la page Contact
+phoneHref,0603356822,Téléphone sans espaces pour les liens cliquables (tel:+33...)
+address,"Université Paris Dauphine-PSL, Place du Maréchal de Lattre de Tassigny, 75016 Paris",Adresse affichée sur la page Contact
+logo,uploads/logo-1777708303205.png,Chemin du logo affiché dans le header et le footer
+footerDescription,Bureau des Étudiants de l'Université Paris Dauphine-PSL — Association loi 1901 à but non lucratif. La vie étudiante depuis 1979.,Texte de présentation affiché dans le footer en français
+footerDescriptionEn,Student Union of Paris Dauphine-PSL University — Non-profit association. Student life since 1979.,Texte de présentation affiché dans le footer en anglais
+instagramUrl,https://www.instagram.com/bdedauphine/,Lien Instagram BDE — bouton dans le footer et page Contact
+instagramLabel,Instagram @bdedauphine,Texte affiché pour le lien Instagram BDE
+nuitsInstagramUrl,https://www.instagram.com/lesnuitsdauphine/,Lien Instagram Nuits Dauphine — affiché sur la page Notre Label
+nuitsInstagramLabel,@lesnuitsdauphine,Texte affiché pour le lien Instagram Nuits
+tiktokUrl,https://www.tiktok.com/@bdedauphine,Lien TikTok — bouton dans le footer et page Contact
+facebookUrl,https://www.facebook.com/bdedauphine,Lien Facebook — bouton dans le footer et page Contact
+defaultTicketUrl,https://shotgun.live/fr,Lien billetterie générique utilisé si un événement n'a pas son propre lien
+defaultGooglePhotosUrl,https://photos.google.com/,Lien Google Photos générique utilisé si une galerie n'a pas son propre album
+copyrightText,© 2026 BDE Dauphine · Paris Dauphine-PSL · Association loi 1901,Texte copyright affiché en bas du footer
+ticket_eventName,How We Dau 2026,Nom de l'événement affiché dans le modal billetterie (popup bouton Billets)
+ticket_eventSub,Paris Dauphine-PSL · Prochainement,Sous-titre du modal billetterie en français
+ticket_eventSubEn,Paris Dauphine-PSL · Coming soon,Sous-titre du modal billetterie en anglais
+ticket_url,https://shotgun.live/fr,URL Shotgun ou autre billetterie — lien du bouton principal du modal
+ticket_buttonLabel,Réserver sur Shotgun,Texte du bouton billetterie en français (ex: Prendre ma place)
+ticket_buttonLabelEn,Book on Shotgun,Texte du bouton billetterie en anglais
+ticket_description,Billetterie officielle — pack asso disponible,Description affichée dans le modal billetterie en français
+ticket_descriptionEn,Official ticketing — association pack available,Description affichée dans le modal billetterie en anglais
+ticket_note,Le pack asso Dauphine donne accès à un tarif réduit sur présentation de ta carte étudiante. Disponible en prévente uniquement.,Note informative dans le modal billetterie en français (ex: tarif réduit)
+ticket_noteEn,The Dauphine association pack gives access to a reduced rate on presentation of your student card. Presale only.,Note informative dans le modal billetterie en anglais
