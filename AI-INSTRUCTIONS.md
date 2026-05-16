@@ -7,20 +7,27 @@
 
 ## ARCHITECTURE DE DONNÉES — À LIRE EN PREMIER
 
-Ce site dispose de **deux sources de données synchronisées** :
+Ce site dispose de **deux sources de données synchronisées automatiquement** :
 
-| Source | Fichiers | Priorité |
+| Source | Fichiers | Usage |
 |---|---|---|
-| Fichiers JS | `data/site.js`, `data/events.js`, `data/sponsors.js`, `data/galleries.js`, `data/artists.js` | Source principale du site |
-| Fichier Excel | `admin.xlsx` (13 onglets) | Miroir convivial des mêmes données |
+| Fichiers JS | `data/site.js`, `data/events.js`, `data/sponsors.js`, `data/galleries.js`, `data/artists.js` | Source lue par le site |
+| Fichiers CSV | `csv/config.csv`, `csv/events.csv`, `csv/sponsors.csv`, etc. (12 fichiers) | Interface tableur pour l'humain |
 
-**Les deux sont toujours synchronisés via GitHub Actions (`sync.yml`) :**
-- Si tu modifies un `data/*.js` → `admin.xlsx` se met à jour automatiquement au prochain push
-- Si l'utilisateur modifie `admin.xlsx` → les `data/*.js` se mettent à jour automatiquement au prochain push
+**Synchronisation automatique via GitHub Actions (`.github/workflows/sync.yml`) :**
+- Un `data/*.js` modifié → les CSV se mettent à jour automatiquement au prochain push
+- Un CSV modifié → les `data/*.js` se mettent à jour automatiquement au prochain push
+- Cloudflare Pages redéploie le site après chaque push
 
 **En tant qu'IA, tu travailles TOUJOURS sur les fichiers `data/*.js` directement.**  
-Ne touche jamais à `admin.xlsx` (fichier binaire Excel, illisible pour toi).  
+Ne touche jamais aux fichiers `csv/` (réservés à l'humain via Excel/Google Sheets).  
 Ne touche jamais à `sync_init.py`, `sync.py`, `.github/workflows/sync.yml` sauf si la demande porte explicitement sur le système de synchronisation.
+
+**Photos et images :**
+- Les photos physiques sont dans `uploads/` (ou `uploads/partners/` pour les logos sponsors)
+- Les chemins sont référencés dans `data/galleries.js` et `data/events.js`
+- Format recommandé : JPG, max 500 KB, max 1920px de large (compatibilité iPhone)
+- Ne jamais inventer un chemin image — vérifier que le fichier est bien dans `uploads/` avant de le référencer
 
 ---
 
@@ -880,4 +887,3 @@ Si des fichiers techniques ont été modifiés, l'expliquer et justifier pourquo
 - Confirmer avant de livrer.
 - Vérifier syntaxe, chemins, slugs, visibilité, bilingue.
 - Livrer uniquement les fichiers modifiés.
-
