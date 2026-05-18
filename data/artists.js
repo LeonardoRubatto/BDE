@@ -1,6 +1,6 @@
 // =====================================================
 // ARTISTES / SHOWCASES
-// Généré automatiquement par sync.py le 18/05/2026 09:48
+// Généré automatiquement par sync.py le 18/05/2026 09:51
 // Modifier via csv/artists_cartes.csv et csv/artists_bande.csv
 // ou directement dans ce fichier.
 // Ne pas renommer window.BDE_ARTISTS.

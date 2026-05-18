@@ -1,6 +1,6 @@
 // =====================================================
 // SPONSORS / PARTENAIRES
-// Généré automatiquement par sync.py le 18/05/2026 09:48
+// Généré automatiquement par sync.py le 18/05/2026 09:51
 // Modifier via csv/sponsors.csv ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SPONSORS.
 // =====================================================
@@ -109,6 +109,19 @@ window.BDE_SPONSORS = [
     "linkLabel": "admissionsparalleles.com →",
     "active": true,
     "order": 8
+  },
+  {
+    "name": "Heetch",
+    "logo": "uploads/partners/logo-heetch.png",
+    "fallback": "",
+    "alt": "Heetch",
+    "url": "https://www.heetch.com",
+    "category": "Mobilité",
+    "type": "Mobilité · VTC",
+    "typeEn": "Mobility · Ride-hailing",
+    "linkLabel": "heetch.com →",
+    "active": true,
+    "order": 9
   },
   {
     "name": "Smart Renting",
