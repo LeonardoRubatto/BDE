@@ -1,6 +1,6 @@
 // =====================================================
 // SPONSORS / PARTENAIRES
-// Généré automatiquement par sync.py le 16/05/2026 05:21
+// Généré automatiquement par sync.py le 18/05/2026 09:46
 // Modifier via csv/sponsors.csv ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SPONSORS.
 // =====================================================
@@ -111,15 +111,15 @@ window.BDE_SPONSORS = [
     "order": 8
   },
   {
-    "name": "En Voiture Simone",
-    "logo": "uploads/partners/logo-en-voiture-simone.png",
-    "fallback": "",
-    "alt": "En Voiture Simone",
-    "url": "https://www.envoituresimone.com",
-    "category": "Mobilité",
-    "type": "Mobilité · Auto-école",
-    "typeEn": "Mobility · Driving School",
-    "linkLabel": "envoituresimone.com →",
+    "name": "Heetch",
+    "logo": "uploads/partners/logo-heetch.png",
+    "fallback": "Heetch",
+    "alt": "[https://www.heetch.com",
+    "url": "Transport](https://www.heetch.com",
+    "category": "Transport) / VTC",
+    "type": "Mobilité · Transport",
+    "typeEn": "Mobility · Transport",
+    "linkLabel": "heetch.com →",
     "active": true,
     "order": 9
   },
@@ -135,5 +135,18 @@ window.BDE_SPONSORS = [
     "linkLabel": "smart-renting.com →",
     "active": true,
     "order": 10
+  },
+  {
+    "name": "En Voiture Simone",
+    "logo": "uploads/partners/logo-en-voiture-simone.png",
+    "fallback": "",
+    "alt": "En Voiture Simone",
+    "url": "https://www.envoituresimone.com",
+    "category": "Mobilité",
+    "type": "Mobilité · Auto-école",
+    "typeEn": "Mobility · Driving School",
+    "linkLabel": "envoituresimone.com →",
+    "active": true,
+    "order": 11
   }
 ];

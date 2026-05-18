@@ -1,6 +1,6 @@
 // =====================================================
 // ÉVÉNEMENTS
-// Généré automatiquement par sync.py le 16/05/2026 05:21
+// Généré automatiquement par sync.py le 18/05/2026 09:46
 // Modifier via csv/events.csv, csv/event_descriptions.csv,
 // csv/event_meta.csv, csv/event_tags.csv, csv/event_artists.csv
 // ou directement dans ce fichier.
