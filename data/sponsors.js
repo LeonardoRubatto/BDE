@@ -111,19 +111,6 @@ window.BDE_SPONSORS = [
     "order": 8
   },
   {
-    "name": "Heetch",
-    "logo": "uploads/partners/logo-heetch.png",
-    "fallback": "Heetch",
-    "alt": "https://www.heetch.com",
-    "url": "Transport",
-    "category": "Transport / VTC",
-    "type": "Mobilité · Transport",
-    "typeEn": "Mobility · Transport",
-    "linkLabel": "heetch.com →",
-    "active": true,
-    "order": 9
-  },
-  {
     "name": "Smart Renting",
     "logo": "",
     "fallback": "SR",
