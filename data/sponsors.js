@@ -1,6 +1,6 @@
 // =====================================================
 // SPONSORS / PARTENAIRES
-// Généré automatiquement par sync.py le 18/05/2026 09:46
+// Généré automatiquement par sync.py le 18/05/2026 09:48
 // Modifier via csv/sponsors.csv ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SPONSORS.
 // =====================================================
@@ -114,9 +114,9 @@ window.BDE_SPONSORS = [
     "name": "Heetch",
     "logo": "uploads/partners/logo-heetch.png",
     "fallback": "Heetch",
-    "alt": "[https://www.heetch.com",
-    "url": "Transport](https://www.heetch.com",
-    "category": "Transport) / VTC",
+    "alt": "https://www.heetch.com",
+    "url": "Transport",
+    "category": "Transport / VTC",
     "type": "Mobilité · Transport",
     "typeEn": "Mobility · Transport",
     "linkLabel": "heetch.com →",
