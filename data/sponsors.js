@@ -1,6 +1,6 @@
 // =====================================================
 // SPONSORS / PARTENAIRES
-// Généré automatiquement par sync.py le 16/05/2026 07:18
+// Généré automatiquement par sync.py le 18/05/2026 10:00
 // Modifier via csv/sponsors.csv ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SPONSORS.
 // =====================================================
@@ -85,15 +85,15 @@ window.BDE_SPONSORS = [
     "order": 6
   },
   {
-    "name": "Prépa Parisiennes",
-    "logo": "",
-    "fallback": "PP",
-    "alt": "Prépa Parisiennes",
-    "url": "https://www.preparisiennes.com",
-    "category": "Formation",
-    "type": "Formation · Orientation",
-    "typeEn": "Education · Guidance",
-    "linkLabel": "preparisiennes.com →",
+    "name": "Heetch",
+    "logo": "uploads/partners/logo-heetch.png",
+    "fallback": "",
+    "alt": "Heetch",
+    "url": "https://www.heetch.com",
+    "category": "Mobilité",
+    "type": "Mobilité · VTC",
+    "typeEn": "Mobility · Ride-hailing",
+    "linkLabel": "heetch.com →",
     "active": true,
     "order": 7
   },
@@ -111,15 +111,15 @@ window.BDE_SPONSORS = [
     "order": 8
   },
   {
-    "name": "Heetch",
-    "logo": "uploads/partners/logo-heetch.png",
-    "fallback": "",
-    "alt": "Heetch",
-    "url": "https://www.heetch.com",
-    "category": "Mobilité",
-    "type": "Mobilité · VTC",
-    "typeEn": "Mobility · Ride-hailing",
-    "linkLabel": "heetch.com →",
+    "name": "Prépa Parisiennes",
+    "logo": "",
+    "fallback": "PP",
+    "alt": "Prépa Parisiennes",
+    "url": "https://www.preparisiennes.com",
+    "category": "Formation",
+    "type": "Formation · Orientation",
+    "typeEn": "Education · Guidance",
+    "linkLabel": "preparisiennes.com →",
     "active": true,
     "order": 9
   },
