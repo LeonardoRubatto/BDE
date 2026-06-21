@@ -10,9 +10,9 @@
 window.BDE_EVENTS = [
   {
     "slug": "begins",
-    "order": 1,
-    "number": "01",
-    "title": "Begin's",
+    "order": 2,
+    "number": "02",
+    "title": "Begins",
     "subtitle": "Lancement d'année · Rencontres · Découverte de la vie dauphinoise",
     "category": "Début d'année",
     "date": "",
@@ -21,8 +21,8 @@ window.BDE_EVENTS = [
       "en": ""
     },
     "statusLabel": {
-      "fr": "SOLD OUT",
-      "en": "SOLD OUT"
+      "fr": "",
+      "en": ""
     },
     "statusColor": "",
     "place": "Paris",
@@ -38,14 +38,14 @@ window.BDE_EVENTS = [
       "en": "Start of year"
     },
     "longDescription": [
-      "Begin's ouvre l'année universitaire avec un format pensé pour se rencontrer, comprendre l'esprit de la promotion et découvrir les associations, les pôles et les visages qui feront vivre Dauphine tout au long de l'année. Un moment simple, accessible et fédérateur pour créer les premiers liens avant les grands rendez-vous du BDE."
+      "Begins ouvre l'année universitaire avec un format pensé pour se rencontrer, comprendre l'esprit de la promotion et découvrir les associations, les pôles et les visages qui feront vivre Dauphine tout au long de l'année. Un moment simple, accessible et fédérateur pour créer les premiers liens avant les grands rendez-vous du BDE."
     ],
     "descriptionBlocks": [
       {
-        "text": "Begin's ouvre l'année universitaire avec un format pensé pour se rencontrer, comprendre l'esprit de la promotion et découvrir les associations, les pôles et les visages qui feront vivre Dauphine tout au long de l'année. Un moment simple, accessible et fédérateur pour créer les premiers liens avant les grands rendez-vous du BDE.",
+        "text": "Begins ouvre l'année universitaire avec un format pensé pour se rencontrer, comprendre l'esprit de la promotion et découvrir les associations, les pôles et les visages qui feront vivre Dauphine tout au long de l'année. Un moment simple, accessible et fédérateur pour créer les premiers liens avant les grands rendez-vous du BDE.",
         "i18n": {
-          "fr": "Begin's ouvre l'année universitaire avec un format pensé pour se rencontrer, comprendre l'esprit de la promotion et découvrir les associations, les pôles et les visages qui feront vivre Dauphine tout au long de l'année. Un moment simple, accessible et fédérateur pour créer les premiers liens avant les grands rendez-vous du BDE.",
-          "en": "Begin's opens the academic year with a format designed to help students meet, understand the spirit of the class and discover the associations, teams and people who will bring Dauphine to life throughout the year. A simple, accessible and unifying moment to create the first connections before the major BDE events."
+          "fr": "Begins ouvre l'année universitaire avec un format pensé pour se rencontrer, comprendre l'esprit de la promotion et découvrir les associations, les pôles et les visages qui feront vivre Dauphine tout au long de l'année. Un moment simple, accessible et fédérateur pour créer les premiers liens avant les grands rendez-vous du BDE.",
+          "en": "Begins opens the academic year with a format designed to help students meet, understand the spirit of the class and discover the associations, teams and people who will bring Dauphine to life throughout the year. A simple, accessible and unifying moment to create the first connections before the major BDE events."
         }
       }
     ],
@@ -55,7 +55,7 @@ window.BDE_EVENTS = [
       "uploads/DSC04314-scaled.jpg",
       "uploads/DSC04346-scaled.jpg"
     ],
-    "alt": "Begin's",
+    "alt": "Begins",
     "ticketUrl": "",
     "ticketLabel": "Réserver",
     "dossierUrl": "",
@@ -137,12 +137,12 @@ window.BDE_EVENTS = [
   },
   {
     "slug": "croisette",
-    "order": 2,
-    "number": "02",
+    "order": 1,
+    "number": "01",
     "title": "La Croisette",
     "subtitle": "Croisière sur la Seine · Soirée d'intégration · Gratuit",
     "category": "Début d'année",
-    "date": "2026-09-18",
+    "date": "",
     "dateLabel": {
       "fr": "",
       "en": ""
@@ -151,7 +151,7 @@ window.BDE_EVENTS = [
       "fr": "",
       "en": ""
     },
-    "statusColor": "red",
+    "statusColor": "",
     "place": "Paris",
     "venue": "BIBI",
     "shortDescription": "Croisière sur la Seine · Soirée d'intégration · Gratuit",
