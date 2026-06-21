@@ -20,9 +20,9 @@ window.BDE_ARTISTS = {
       "order": 1
     },
     {
-      "name": "Maître Gims",
+      "name": "Gims",
       "image": "uploads/cap-144920.png",
-      "alt": "Maître Gims",
+      "alt": "Gims",
       "yearEvent": "2025 · How We Dau",
       "eventText": "Showcase · Paris Dauphine",
       "badge": "Édition 2025",
@@ -88,7 +88,7 @@ window.BDE_ARTISTS = {
   ],
   "textStrip": [
     "Gazo",
-    "Maître Gims",
+    "Gims",
     "SCH",
     "Laylow",
     "Djadja & Dinaz",

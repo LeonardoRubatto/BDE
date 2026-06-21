@@ -42,7 +42,7 @@ window.BDE_SPONSORS = [
     "type": "Mobilité · VTC",
     "typeEn": "Mobility · Ride-hailing",
     "linkLabel": "uber.com →",
-    "active": true,
+    "active": false,
     "order": 3
   },
   {
@@ -55,14 +55,14 @@ window.BDE_SPONSORS = [
     "type": "Stockage · Logistique",
     "typeEn": "Storage · Logistics",
     "linkLabel": "youstock.com →",
-    "active": true,
+    "active": false,
     "order": 4
   },
   {
-    "name": "Lydia / Sumeria",
+    "name": "Sumeria",
     "logo": "uploads/partners/logo-sumeria.png",
     "fallback": "",
-    "alt": "Lydia / Sumeria",
+    "alt": "Sumeria",
     "url": "https://sumeria.eu",
     "category": "Fintech",
     "type": "Fintech · Paiement",
@@ -81,7 +81,7 @@ window.BDE_SPONSORS = [
     "type": "Sport · Bien-être",
     "typeEn": "Sport · Wellness",
     "linkLabel": "cerclesdelaforme.com →",
-    "active": true,
+    "active": false,
     "order": 6
   },
   {
@@ -107,7 +107,7 @@ window.BDE_SPONSORS = [
     "type": "Orientation · Admissions",
     "typeEn": "Guidance · Admissions",
     "linkLabel": "admissionsparalleles.com →",
-    "active": true,
+    "active": false,
     "order": 8
   },
   {
@@ -120,7 +120,7 @@ window.BDE_SPONSORS = [
     "type": "Formation · Orientation",
     "typeEn": "Education · Guidance",
     "linkLabel": "preparisiennes.com →",
-    "active": true,
+    "active": false,
     "order": 9
   },
   {
@@ -133,7 +133,7 @@ window.BDE_SPONSORS = [
     "type": "Immobilier · Étudiant",
     "typeEn": "Real Estate · Student",
     "linkLabel": "smart-renting.com →",
-    "active": true,
+    "active": false,
     "order": 10
   },
   {
@@ -146,7 +146,7 @@ window.BDE_SPONSORS = [
     "type": "Mobilité · Auto-école",
     "typeEn": "Mobility · Driving School",
     "linkLabel": "envoituresimone.com →",
-    "active": true,
+    "active": false,
     "order": 11
   }
 ];
