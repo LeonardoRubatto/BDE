@@ -1,11 +1,11 @@
 ﻿SLUG GALERIE,ORDRE,SRC,ALT,LÉGENDE FR,LÉGENDE EN,TAG FR,TAG EN
 ## Identifiant de la galerie concernée (doit correspondre à la colonne SLUG de galleries.csv),Ordre d'affichage dans la galerie (1=première photo),Chemin de la photo depuis la racine du site (ex: uploads/photo.jpg),Texte alternatif pour l'accessibilité et le SEO,Légende affichée sous la photo en français (visible en mode lightbox),Légende affichée sous la photo en anglais,Badge/tag affiché sur la miniature en français (ex: Gala · 2026),Badge/tag affiché sur la miniature en anglais
-begins,1,uploads/photos_now-1777708863357.jpg,Begin's 2026,Les premiers instants de la promotion,,Begin's · 2026,
-begins,2,uploads/DSC04314-scaled.jpg,Begin's 2026,Rencontres et lancement d'année,,Begin's · 2026,
-begins,3,uploads/DSC04346-scaled.jpg,Begin's 2026,Découvrir les visages du BDE,,Begin's · 2026,
-begins,4,uploads/DSC04479-scaled.jpg,Begin's 2026,"Premiers liens, première ambiance",,Begin's · 2026,
-begins,5,uploads/DSC04545-scaled.jpg,Begin's 2026,Une année qui commence ensemble,,Begin's · 2026,
-begins,6,uploads/DSC04582-scaled.jpg,Begin's 2026,"Découverte, accueil et cohésion",,Begin's · 2026,
+begins,1,uploads/photos_now-1777708863357.jpg,Begins 2026,Les premiers instants de la promotion,,Begins · 2026,
+begins,2,uploads/DSC04314-scaled.jpg,Begins 2026,Rencontres et lancement d'année,,Begins · 2026,
+begins,3,uploads/DSC04346-scaled.jpg,Begins 2026,Découvrir les visages du BDE,,Begins · 2026,
+begins,4,uploads/DSC04479-scaled.jpg,Begins 2026,"Premiers liens, première ambiance",,Begins · 2026,
+begins,5,uploads/DSC04545-scaled.jpg,Begins 2026,Une année qui commence ensemble,,Begins · 2026,
+begins,6,uploads/DSC04582-scaled.jpg,Begins 2026,"Découverte, accueil et cohésion",,Begins · 2026,
 croisette,1,uploads/DSC04545-scaled.jpg,La Croisette 2026,La Seine au coucher du soleil,,La Croisette · 2026,
 croisette,2,uploads/DSC04479-scaled.jpg,La Croisette 2026,Ambiance sur le pont,,La Croisette · 2026,
 croisette,3,uploads/DSC04433-scaled.jpg,La Croisette 2026,Les premières rencontres,,La Croisette · 2026,
