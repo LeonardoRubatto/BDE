@@ -9,7 +9,7 @@
 window.BDE_GALLERIES = [
   {
     "slug": "begins",
-    "title": "Begin's",
+    "title": "Begins",
     "page": "galerie-begins.html",
     "eventSlug": "begins",
     "coverImage": "uploads/photos_now-1777708863357.jpg",
@@ -20,50 +20,50 @@ window.BDE_GALLERIES = [
     "images": [
       {
         "src": "uploads/photos_now-1777708863357.jpg",
-        "alt": "Begin's 2026",
+        "alt": "Begins 2026",
         "caption": "Les premiers instants de la promotion",
         "captionI18n": {},
-        "tag": "Begin's · 2026",
+        "tag": "Begins · 2026",
         "tagI18n": {}
       },
       {
         "src": "uploads/DSC04314-scaled.jpg",
-        "alt": "Begin's 2026",
+        "alt": "Begins 2026",
         "caption": "Rencontres et lancement d'année",
         "captionI18n": {},
-        "tag": "Begin's · 2026",
+        "tag": "Begins · 2026",
         "tagI18n": {}
       },
       {
         "src": "uploads/DSC04346-scaled.jpg",
-        "alt": "Begin's 2026",
+        "alt": "Begins 2026",
         "caption": "Découvrir les visages du BDE",
         "captionI18n": {},
-        "tag": "Begin's · 2026",
+        "tag": "Begins · 2026",
         "tagI18n": {}
       },
       {
         "src": "uploads/DSC04479-scaled.jpg",
-        "alt": "Begin's 2026",
+        "alt": "Begins 2026",
         "caption": "Premiers liens, première ambiance",
         "captionI18n": {},
-        "tag": "Begin's · 2026",
+        "tag": "Begins · 2026",
         "tagI18n": {}
       },
       {
         "src": "uploads/DSC04545-scaled.jpg",
-        "alt": "Begin's 2026",
+        "alt": "Begins 2026",
         "caption": "Une année qui commence ensemble",
         "captionI18n": {},
-        "tag": "Begin's · 2026",
+        "tag": "Begins · 2026",
         "tagI18n": {}
       },
       {
         "src": "uploads/DSC04582-scaled.jpg",
-        "alt": "Begin's 2026",
+        "alt": "Begins 2026",
         "caption": "Découverte, accueil et cohésion",
         "captionI18n": {},
-        "tag": "Begin's · 2026",
+        "tag": "Begins · 2026",
         "tagI18n": {}
       }
     ]
