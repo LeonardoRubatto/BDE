@@ -140,7 +140,7 @@ window.BDE_EVENTS = [
     "order": 1,
     "number": "01",
     "title": "La Croisette",
-    "subtitle": "Croisière sur la Seine · Soirée d'intégration · Gratuit",
+    "subtitle": "Croisière sur la Seine · Soirée d'intégration",
     "category": "Début d'année",
     "date": "",
     "dateLabel": {
@@ -154,10 +154,10 @@ window.BDE_EVENTS = [
     "statusColor": "",
     "place": "Paris",
     "venue": "BIBI",
-    "shortDescription": "Croisière sur la Seine · Soirée d'intégration · Gratuit",
+    "shortDescription": "Croisière sur la Seine · Soirée d'intégration",
     "homeDescriptionI18n": {
-      "fr": "Croisière sur la Seine · Soirée d'intégration · Gratuit",
-      "en": "River cruise on the Seine · Integration party · Free"
+      "fr": "Croisière sur la Seine · Soirée d'intégration",
+      "en": "River cruise on the Seine · Integration party"
     },
     "homePeriod": "Début d'année",
     "homePeriodI18n": {
@@ -165,14 +165,14 @@ window.BDE_EVENTS = [
       "en": "Start of year"
     },
     "longDescription": [
-      "Le tout premier événement de l'année. Une croisette gratuite sur la Seine pour permettre aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI."
+      "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI."
     ],
     "descriptionBlocks": [
       {
-        "text": "Le tout premier événement de l'année. Une croisette gratuite sur la Seine pour permettre aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
+        "text": "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
         "i18n": {
-          "fr": "Le tout premier événement de l'année. Une croisette gratuite sur la Seine pour permettre aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
-          "en": "The very first event of the year. A free river cruise on the Seine so new arrivals can discover the student associations and the Dauphine community. A first taste of the BDE world before the big WEI."
+          "fr": "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
+          "en": "The very first event of the year. A river cruise on the Seine allows new arrivals to discover the student associations and the Dauphine community. A first taste of the BDE world before the big WEI."
         }
       }
     ],
@@ -235,18 +235,6 @@ window.BDE_EVENTS = [
         }
       },
       {
-        "key": "Prix",
-        "value": "Gratuit",
-        "keyI18n": {
-          "fr": "Prix",
-          "en": "Price"
-        },
-        "valueI18n": {
-          "fr": "Gratuit",
-          "en": "Free"
-        }
-      },
-      {
         "key": "Ambiance",
         "value": "Rencontre, découverte, cohésion",
         "keyI18n": {
@@ -269,10 +257,10 @@ window.BDE_EVENTS = [
     "title": "WEI — Weekend d'Intégration",
     "subtitle": "600+ participants · 3 jours · Soirées thématiques",
     "category": "Rentrée",
-    "date": "",
+    "date": "2026-10-09",
     "dateLabel": {
-      "fr": "",
-      "en": ""
+      "fr": "Du 9 au 11 octobre 2026",
+      "en": "October 9–11, 2026"
     },
     "statusLabel": {
       "fr": "",
@@ -363,14 +351,14 @@ window.BDE_EVENTS = [
       },
       {
         "key": "Période",
-        "value": "Rentrée de septembre / octobre",
+        "value": "9–11 octobre 2026",
         "keyI18n": {
           "fr": "Période",
           "en": "Period"
         },
         "valueI18n": {
-          "fr": "Rentrée de septembre / octobre",
-          "en": "September / October back-to-school"
+          "fr": "9–11 octobre 2026",
+          "en": "October 9–11, 2026"
         }
       },
       {
@@ -510,14 +498,14 @@ window.BDE_EVENTS = [
       },
       {
         "key": "Artistes passés",
-        "value": "Daft Punk, Ofenbach, Breakbot…",
+        "value": "Emmanuel Jal, Ofenbach, Esposito…",
         "keyI18n": {
           "fr": "Artistes passés",
           "en": "Past artists"
         },
         "valueI18n": {
-          "fr": "Daft Punk, Ofenbach, Breakbot…",
-          "en": "Daft Punk, Ofenbach, Breakbot…"
+          "fr": "Emmanuel Jal, Ofenbach, Esposito…",
+          "en": "Emmanuel Jal, Ofenbach, Esposito…"
         }
       },
       {
@@ -541,7 +529,7 @@ window.BDE_EVENTS = [
     "order": 5,
     "number": "05",
     "title": "How We Dau",
-    "subtitle": "Showcases rap · Gazo, Gims, SCH, Laylow, PLK… · Bar record",
+    "subtitle": "Showcases rap · Gazo, Gims, SCH, Laylow, PLK…",
     "category": "Annuel · Club",
     "date": "",
     "dateLabel": {
@@ -555,10 +543,10 @@ window.BDE_EVENTS = [
     "statusColor": "",
     "place": "Paris",
     "venue": "",
-    "shortDescription": "Showcases rap · Gazo, Gims, SCH, Laylow, PLK… · Bar record",
+    "shortDescription": "Showcases rap · Gazo, Gims, SCH, Laylow, PLK…",
     "homeDescriptionI18n": {
-      "fr": "Showcases rap · Gazo, Gims, SCH, Laylow, PLK… · Bar record",
-      "en": "Rap showcases · Gazo, Gims, SCH, Laylow, PLK… · Record bar"
+      "fr": "Showcases rap · Gazo, Gims, SCH, Laylow, PLK…",
+      "en": "Rap showcases · Gazo, Gims, SCH, Laylow, PLK…"
     },
     "homePeriod": "Annuel · Club",
     "homePeriodI18n": {
@@ -566,14 +554,14 @@ window.BDE_EVENTS = [
       "en": "Annual · Club"
     },
     "longDescription": [
-      "La soirée emblématique du BDE. Depuis 6 ans, la How We Dau s'est imposée dans l'univers rap des soirées parisiennes avec des showcases exclusifs d'artistes de premier plan. Record de buvette, énergie unique — un format qui grandit chaque année."
+      "La soirée emblématique du BDE. Depuis 6 ans, la How We Dau s'est imposée dans l'univers rap des soirées parisiennes avec des showcases exclusifs d'artistes de premier plan. Énergie unique — un format qui grandit chaque année."
     ],
     "descriptionBlocks": [
       {
-        "text": "La soirée emblématique du BDE. Depuis 6 ans, la How We Dau s'est imposée dans l'univers rap des soirées parisiennes avec des showcases exclusifs d'artistes de premier plan. Record de buvette, énergie unique — un format qui grandit chaque année.",
+        "text": "La soirée emblématique du BDE. Depuis 6 ans, la How We Dau s'est imposée dans l'univers rap des soirées parisiennes avec des showcases exclusifs d'artistes de premier plan. Énergie unique — un format qui grandit chaque année.",
         "i18n": {
-          "fr": "La soirée emblématique du BDE. Depuis 6 ans, la How We Dau s'est imposée dans l'univers rap des soirées parisiennes avec des showcases exclusifs d'artistes de premier plan. Record de buvette, énergie unique — un format qui grandit chaque année.",
-          "en": "The BDE's iconic night. For 6 years, How We Dau has established itself in the Parisian rap scene with exclusive showcases from top-tier artists. Record bar sales, unmatched energy — a format that grows every year."
+          "fr": "La soirée emblématique du BDE. Depuis 6 ans, la How We Dau s'est imposée dans l'univers rap des soirées parisiennes avec des showcases exclusifs d'artistes de premier plan. Énergie unique — un format qui grandit chaque année.",
+          "en": "The BDE's iconic night. For 6 years, How We Dau has established itself in the Parisian rap scene with exclusive showcases from top-tier artists. Unmatched energy — a format that grows every year."
         }
       }
     ],
@@ -656,25 +644,7 @@ window.BDE_EVENTS = [
         }
       },
       {
-        "key": "Public",
-        "value": "Dauphinois + extérieur",
-        "keyI18n": {
-          "fr": "Public",
-          "en": "Audience"
-        },
-        "valueI18n": {
-          "fr": "Dauphinois + extérieur",
-          "en": "Dauphine students + general public"
-        }
-      }
-    ],
-    "artists": [
-      {
-        "label": "Gazo (2026)",
-        "highlight": true
-      },
-      {
-        "label": "Gims (2023)",
+        "label": "Gims (2025)",
         "highlight": false
       },
       {
@@ -739,7 +709,7 @@ window.BDE_EVENTS = [
     },
     "longDescription": [
       "Le Gala est l'événement de prestige de l'année. Cérémonie d'adieu pour les M2 en présence de l'administration, puis bal dansant ouvert à toute la communauté — des L1 aux M2. Plusieurs salles, plusieurs ambiances, un lieu d'exception.",
-      "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes — la meilleure soirée de l'histoire du BDE."
+      "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes."
     ],
     "descriptionBlocks": [
       {
@@ -750,10 +720,10 @@ window.BDE_EVENTS = [
         }
       },
       {
-        "text": "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes — la meilleure soirée de l'histoire du BDE.",
+        "text": "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes.",
         "i18n": {
-          "fr": "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes — la meilleure soirée de l'histoire du BDE.",
-          "en": "The 2025 edition at Chalet du Lac brought together 1,500 people — the greatest night in BDE history."
+          "fr": "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes.",
+          "en": "The 2025 edition at Chalet du Lac brought together 1,500 people."
         }
       }
     ],
@@ -868,7 +838,7 @@ window.BDE_EVENTS = [
     "order": 7,
     "number": "07",
     "title": "Prix Mode",
-    "subtitle": "Défilés · Art contemporain · Remplace les JACES",
+    "subtitle": "Défilés de mode · Art contemporain · Culture",
     "category": "Campus Dauphine",
     "date": "",
     "dateLabel": {
@@ -882,10 +852,10 @@ window.BDE_EVENTS = [
     "statusColor": "",
     "place": "Paris",
     "venue": "",
-    "shortDescription": "Défilés · Art contemporain · Remplace les JACES",
+    "shortDescription": "Défilés de mode · Art contemporain · Culture",
     "homeDescriptionI18n": {
-      "fr": "Défilés · Art contemporain · Remplace les JACES",
-      "en": "Fashion shows · Contemporary art · Replaces JACES"
+      "fr": "Défilés de mode · Art contemporain · Culture",
+      "en": "Fashion shows · Contemporary art · Culture"
     },
     "homePeriod": "Campus Dauphine",
     "homePeriodI18n": {
@@ -893,14 +863,14 @@ window.BDE_EVENTS = [
       "en": "Dauphine Campus"
     },
     "longDescription": [
-      "Le Prix Mode succède aux JACES et aux Dauphine Art Days pour offrir un format renouvelé, centré sur les défilés de mode et l'expression artistique. Créateurs émergents, mannequins dauphinois, maquilleurs — un festival qui met l'art au cœur du campus. Organisé en collaboration avec le BDA et le master MOC."
+      "Le Prix Mode propose un format centré sur les défilés de mode et l'expression artistique. Créateurs émergents, mannequins dauphinois et maquilleurs font vivre un festival qui place l'art au cœur du campus. Organisé en collaboration avec le BDA."
     ],
     "descriptionBlocks": [
       {
-        "text": "Le Prix Mode succède aux JACES et aux Dauphine Art Days pour offrir un format renouvelé, centré sur les défilés de mode et l'expression artistique. Créateurs émergents, mannequins dauphinois, maquilleurs — un festival qui met l'art au cœur du campus. Organisé en collaboration avec le BDA et le master MOC.",
+        "text": "Le Prix Mode propose un format centré sur les défilés de mode et l'expression artistique. Créateurs émergents, mannequins dauphinois et maquilleurs font vivre un festival qui place l'art au cœur du campus. Organisé en collaboration avec le BDA.",
         "i18n": {
-          "fr": "Le Prix Mode succède aux JACES et aux Dauphine Art Days pour offrir un format renouvelé, centré sur les défilés de mode et l'expression artistique. Créateurs émergents, mannequins dauphinois, maquilleurs — un festival qui met l'art au cœur du campus. Organisé en collaboration avec le BDA et le master MOC.",
-          "en": "Prix Mode succeeds the JACES and Dauphine Art Days with a fresh format centred on fashion shows and artistic expression. Emerging designers, Dauphine models, make-up artists — a festival that puts art at the heart of campus. Co-organised with the BDA and the MOC master's programme."
+          "fr": "Le Prix Mode propose un format centré sur les défilés de mode et l'expression artistique. Créateurs émergents, mannequins dauphinois et maquilleurs font vivre un festival qui place l'art au cœur du campus. Organisé en collaboration avec le BDA.",
+          "en": "Prix Mode offers a format centred on fashion shows and artistic expression. Emerging designers, Dauphine models and make-up artists bring a festival that places art at the heart of campus. Organised in collaboration with the BDA."
         }
       }
     ],
@@ -946,18 +916,6 @@ window.BDE_EVENTS = [
       }
     ],
     "meta": [
-      {
-        "key": "Remplace",
-        "value": "Les JACES / Dauphine Art Days",
-        "keyI18n": {
-          "fr": "Remplace",
-          "en": "Replaces"
-        },
-        "valueI18n": {
-          "fr": "Les JACES / Dauphine Art Days",
-          "en": "The JACES / Dauphine Art Days"
-        }
-      },
       {
         "key": "Format",
         "value": "Défilés de mode, art, culture",
