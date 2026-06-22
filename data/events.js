@@ -642,6 +642,12 @@ window.BDE_EVENTS = [
           "fr": "Showcases d'artistes majeurs",
           "en": "Exclusive major artist showcases"
         }
+      }
+    ],
+    "artists": [
+      {
+        "label": "Gazo (2026)",
+        "highlight": true
       },
       {
         "label": "Gims (2025)",
