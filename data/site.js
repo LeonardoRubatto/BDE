@@ -12,8 +12,8 @@ window.BDE_SITE = {
   "year": "2026",
   "seasonLabel": "Saison 2025-2026",
   "email": "bdedauphine@gmail.com",
-  "phone": "06 03 35 68 22",
-  "phoneHref": "0603356822",
+  "phone": "07 86 21 93 12",
+  "phoneHref": "0786219312",
   "address": "Université Paris Dauphine-PSL, Place du Maréchal de Lattre de Tassigny, 75016 Paris",
   "logo": "uploads/logo-1777708303205.png",
   "footerDescription": "Bureau des Étudiants de l'Université Paris Dauphine-PSL — Association loi 1901 à but non lucratif. La vie étudiante depuis 1979.",
@@ -24,20 +24,20 @@ window.BDE_SITE = {
   "nuitsInstagramLabel": "@lesnuitsdauphine",
   "tiktokUrl": "https://www.tiktok.com/@bdedauphine",
   "facebookUrl": "https://www.facebook.com/bdedauphine",
-  "defaultTicketUrl": "https://shotgun.live/fr",
+  "defaultTicketUrl": "https://shotgun.live/fr/venues/nuits-dauphine",
   "defaultGooglePhotosUrl": "https://photos.google.com/",
   "copyrightText": "© 2026 BDE Dauphine · Paris Dauphine-PSL · Association loi 1901",
   "ticket": {
     "eventName": "How We Dau 2026",
     "eventSub": "Paris Dauphine-PSL · Prochainement",
     "eventSubEn": "Paris Dauphine-PSL · Coming soon",
-    "url": "https://shotgun.live/fr",
+    "url": "https://shotgun.live/fr/venues/nuits-dauphine",
     "buttonLabel": "Réserver sur Shotgun",
     "buttonLabelEn": "Book on Shotgun",
-    "description": "Billetterie officielle — pack asso disponible",
-    "descriptionEn": "Official ticketing — association pack available",
-    "note": "Le pack asso Dauphine donne accès à un tarif réduit sur présentation de ta carte étudiante. Disponible en prévente uniquement.",
-    "noteEn": "The Dauphine association pack gives access to a reduced rate on presentation of your student card. Presale only."
+    "description": "Billetterie officielle",
+    "descriptionEn": "Official ticketing",
+    "note": "",
+    "noteEn": ""
   },
   "navigation": [
     {
