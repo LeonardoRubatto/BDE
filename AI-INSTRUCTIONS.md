@@ -417,7 +417,7 @@ window.BDE_ARTISTS = {
       "order": 1
     }
   ],
-  "textStrip": ["Gazo", "Maître Gims", "SCH", "..."]  // Bandeau texte défilant sur la homepage.
+  "textStrip": ["Gazo", "Gims", "SCH", "..."]  // Bandeau texte défilant sur la homepage.
 }
 ```
 
