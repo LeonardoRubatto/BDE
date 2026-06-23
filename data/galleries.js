@@ -195,43 +195,67 @@ window.BDE_GALLERIES = [
     "title": "Gala Dauphine",
     "page": "galerie-gala.html",
     "eventSlug": "gala",
-    "coverImage": "uploads/DSC04666-scaled.jpg",
+    "coverImage": "uploads/gala-2025-259.jpg",
     "googlePhotosUrl": "https://photos.google.com/",
     "lightboxMode": "lightbox",
     "active": true,
     "order": 4,
     "images": [
       {
-        "src": "uploads/DSC04666-scaled.jpg",
-        "alt": "Gala 2025",
-        "caption": "1 500 dauphinois en tenue chic — une salle qui ne respire plus",
-        "captionI18n": {},
-        "tag": "Cérémonie",
-        "tagI18n": {}
+        "src": "uploads/gala-2025-189.jpg",
+        "alt": "Groupe d'étudiants au Gala Dauphine 2025",
+        "caption": "Une promotion réunie pour la soirée de l'année",
+        "captionI18n": {
+          "fr": "Une promotion réunie pour la soirée de l'année",
+          "en": "A class reunited for the event of the year"
+        },
+        "tag": "Gala · 2025",
+        "tagI18n": {
+          "fr": "Gala · 2025",
+          "en": "Gala · 2025"
+        }
       },
       {
-        "src": "uploads/DSC04743-scaled.jpg",
-        "alt": "Gala 2025",
-        "caption": "Le Chalet du Lac, écrin parfait pour la soirée de l'année",
-        "captionI18n": {},
+        "src": "uploads/gala-2025-208.jpg",
+        "alt": "Étudiants en tenue de soirée au Gala Dauphine 2025",
+        "caption": "Tenues de soirée et souvenirs partagés",
+        "captionI18n": {
+          "fr": "Tenues de soirée et souvenirs partagés",
+          "en": "Evening wear and shared memories"
+        },
+        "tag": "Élégance",
+        "tagI18n": {
+          "fr": "Élégance",
+          "en": "Elegance"
+        }
+      },
+      {
+        "src": "uploads/gala-2025-332.jpg",
+        "alt": "Piste de danse du Gala Dauphine 2025",
+        "caption": "Le bal bat son plein au Chalet du Lac",
+        "captionI18n": {
+          "fr": "Le bal bat son plein au Chalet du Lac",
+          "en": "The ball in full swing at Chalet du Lac"
+        },
         "tag": "Bal",
-        "tagI18n": {}
+        "tagI18n": {
+          "fr": "Bal",
+          "en": "Ball"
+        }
       },
       {
-        "src": "uploads/DSC04627-scaled.jpg",
-        "alt": "Gala 2025",
-        "caption": "Une soirée co-organisée avec l'université — le niveau supérieur",
-        "captionI18n": {},
-        "tag": "Prestige",
-        "tagI18n": {}
-      },
-      {
-        "src": "uploads/DSC04545-scaled.jpg",
-        "alt": "Gala 2025",
-        "caption": "Plusieurs salles, plusieurs ambiances — le Gala comme état d'esprit",
-        "captionI18n": {},
-        "tag": "Ambiance",
-        "tagI18n": {}
+        "src": "uploads/gala-2025-248.jpg",
+        "alt": "Vue d'ensemble du Gala Dauphine 2025",
+        "caption": "Le Chalet du Lac rempli par la communauté dauphinoise",
+        "captionI18n": {
+          "fr": "Le Chalet du Lac rempli par la communauté dauphinoise",
+          "en": "Chalet du Lac filled with the Dauphine community"
+        },
+        "tag": "Vue d'ensemble",
+        "tagI18n": {
+          "fr": "Vue d'ensemble",
+          "en": "Wide view"
+        }
       }
     ]
   },
