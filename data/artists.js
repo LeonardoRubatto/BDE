@@ -32,7 +32,7 @@ window.BDE_ARTISTS = {
     },
     {
       "name": "SCH",
-      "image": "uploads/cap-145000.png",
+      "image": "uploads/DSC05266-scaled.jpg",
       "alt": "SCH",
       "yearEvent": "2023 · How We Dau",
       "eventText": "Showcase · Paris Dauphine",
@@ -54,7 +54,7 @@ window.BDE_ARTISTS = {
     },
     {
       "name": "Djadja & Dinaz",
-      "image": "uploads/cap-145101.png",
+      "image": "uploads/hwd2024dinaz.jpg",
       "alt": "Djadja & Dinaz",
       "yearEvent": "2022 · How We Dau",
       "eventText": "Showcase · Paris Dauphine",

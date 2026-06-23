@@ -733,11 +733,12 @@ window.BDE_EVENTS = [
         }
       }
     ],
-    "image": "uploads/DSC04666-scaled.jpg",
+    "image": "uploads/gala-2025-259.jpg",
     "images": [
-      "uploads/DSC04666-scaled.jpg",
-      "uploads/DSC04743-scaled.jpg",
-      "uploads/DSC04627-scaled.jpg"
+      "uploads/gala-2025-259.jpg",
+      "uploads/gala-2025-236.jpg",
+      "uploads/gala-2025-248.jpg",
+      "uploads/gala-2025-338.jpg"
     ],
     "alt": "Gala Dauphine 2025",
     "ticketUrl": "",
