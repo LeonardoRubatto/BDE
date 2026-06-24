@@ -1,12 +1,12 @@
 ﻿SLUG ÉVÉNEMENT,ORDRE,CLÉ FR,CLÉ EN,VALEUR FR,VALEUR EN
 ## Slug de l'événement concerné,Ordre d'affichage de la ligne dans le tableau d'infos,"Label affiché en français dans les infos pratiques (ex: Format, Durée, Prix, Lieu)",Label affiché en anglais,"Valeur affichée en français (ex: Soirée, 6h, 15€, Paris)",Valeur affichée en anglais
+croisette,1,Format,Format,Croisière sur la Seine,River cruise on the Seine
+croisette,2,Période,Period,Début d'année universitaire,Start of the academic year
+croisette,3,Ambiance,Atmosphere,"Rencontre, découverte, cohésion","Meeting, discovery, bonding"
 begins,1,Format,Format,Rencontre & découverte,Meetup & discovery
 begins,2,Période,Period,Début d'année universitaire,Start of the academic year
 begins,3,Objectif,Purpose,Créer les premiers liens,Create first connections
 begins,4,Ambiance,Atmosphere,"Accueil, découverte, cohésion","Welcome, discovery, bonding"
-croisette,1,Format,Format,Croisière sur la Seine,River cruise on the Seine
-croisette,2,Période,Period,Début d'année universitaire,Start of the academic year
-croisette,3,Ambiance,Atmosphere,"Rencontre, découverte, cohésion","Meeting, discovery, bonding"
 wei,1,Durée,Duration,3 jours,3 days
 wei,2,Participants,Participants,600 — 700,600 — 700
 wei,3,Période,Period,9–11 octobre 2026,"October 9–11, 2026"
