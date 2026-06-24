@@ -28,6 +28,7 @@ Ne touche jamais à `sync_init.py`, `sync.py`, `.github/workflows/sync.yml` sauf
 - Les chemins sont référencés dans `data/galleries.js` et `data/events.js`
 - Format recommandé : JPG, max 500 KB, max 1920px de large (compatibilité iPhone)
 - Ne jamais inventer un chemin image — vérifier que le fichier est bien dans `uploads/` avant de le référencer
+- Pour reproduire une importation complète de photos, suivre la recette courte en section 14.
 
 ---
 
@@ -887,3 +888,19 @@ Si des fichiers techniques ont été modifiés, l'expliquer et justifier pourquo
 - Confirmer avant de livrer.
 - Vérifier syntaxe, chemins, slugs, visibilité, bilingue.
 - Livrer uniquement les fichiers modifiés.
+
+---
+
+## 14. Recette courte — importer toutes les photos d’une galerie
+
+État de référence : Begins 2025 = 34 photos, Croisette 2025 = 22, Gala 2026 = 54.
+
+1. Partir du dernier `main` pour ne pas écraser les changements faits sur GitHub.
+2. Réutiliser les fichiers déjà présents dans `uploads/`, puis convertir uniquement les sources manquantes.
+3. Nommage utilisé : `begins-2025-*.jpg`, `croisette-2025-*.jpg`, `gala-2026-NUMERO.jpg`.
+4. Conversion : orientation EXIF, RGB, plus grand côté limité à 1920 px, JPG progressif/optimisé, qualité initiale 84 puis réduite jusqu’à environ 420 KB, toujours sous 500 KB.
+5. Ajouter chaque chemin une seule fois dans le tableau `images` correspondant de `data/galleries.js`.
+6. Pour ne rien afficher au survol, laisser `caption`, `tag` et leurs objets i18n vides.
+7. Ne pas modifier `coverImage`, `data/events.js`, les covers Événements ou le hero sans demande explicite.
+8. Dans `galerie-begins.html`, `galerie-croisette.html` et `galerie-gala.html`, conserver le titre « Éditions précédentes », mais laisser sa grille `.gallery-masonry` vide tant qu’aucune archive réelle n’existe.
+9. Vérifier : chemins uniques, fichiers présents, maximum 1920 px et 500 KB, `node --check data/galleries.js`, `git diff --check`, et aucun diff sur `data/events.js`.

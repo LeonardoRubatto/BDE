@@ -19,7 +19,7 @@ window.BDE_GALLERIES = [
     "order": 1,
     "images": [
       {
-        "src": "uploads/begins-2025-01.jpg",
+        "src": "uploads/begins-2025-extra-01.jpg",
         "alt": "Begins 2025 — photo 1",
         "caption": "",
         "captionI18n": {},
@@ -27,7 +27,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-02.jpg",
+        "src": "uploads/begins-2025-extra-02.jpg",
         "alt": "Begins 2025 — photo 2",
         "caption": "",
         "captionI18n": {},
@@ -35,7 +35,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-03.jpg",
+        "src": "uploads/begins-2025-01.jpg",
         "alt": "Begins 2025 — photo 3",
         "caption": "",
         "captionI18n": {},
@@ -43,7 +43,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-04.jpg",
+        "src": "uploads/begins-2025-extra-04.jpg",
         "alt": "Begins 2025 — photo 4",
         "caption": "",
         "captionI18n": {},
@@ -51,7 +51,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-05.jpg",
+        "src": "uploads/begins-2025-extra-05.jpg",
         "alt": "Begins 2025 — photo 5",
         "caption": "",
         "captionI18n": {},
@@ -59,7 +59,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-06.jpg",
+        "src": "uploads/begins-2025-02.jpg",
         "alt": "Begins 2025 — photo 6",
         "caption": "",
         "captionI18n": {},
@@ -67,7 +67,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-07.jpg",
+        "src": "uploads/begins-2025-03.jpg",
         "alt": "Begins 2025 — photo 7",
         "caption": "",
         "captionI18n": {},
@@ -75,7 +75,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-08.jpg",
+        "src": "uploads/begins-2025-extra-08.jpg",
         "alt": "Begins 2025 — photo 8",
         "caption": "",
         "captionI18n": {},
@@ -83,7 +83,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-09.jpg",
+        "src": "uploads/begins-2025-extra-09.jpg",
         "alt": "Begins 2025 — photo 9",
         "caption": "",
         "captionI18n": {},
@@ -91,8 +91,200 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/begins-2025-11.jpg",
+        "src": "uploads/begins-2025-extra-10.jpg",
         "alt": "Begins 2025 — photo 10",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-04.jpg",
+        "alt": "Begins 2025 — photo 11",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-12.jpg",
+        "alt": "Begins 2025 — photo 12",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-05.jpg",
+        "alt": "Begins 2025 — photo 13",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-14.jpg",
+        "alt": "Begins 2025 — photo 14",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-15.jpg",
+        "alt": "Begins 2025 — photo 15",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-06.jpg",
+        "alt": "Begins 2025 — photo 16",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-17.jpg",
+        "alt": "Begins 2025 — photo 17",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-18.jpg",
+        "alt": "Begins 2025 — photo 18",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-19.jpg",
+        "alt": "Begins 2025 — photo 19",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-07.jpg",
+        "alt": "Begins 2025 — photo 20",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-21.jpg",
+        "alt": "Begins 2025 — photo 21",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-08.jpg",
+        "alt": "Begins 2025 — photo 22",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-23.jpg",
+        "alt": "Begins 2025 — photo 23",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-24.jpg",
+        "alt": "Begins 2025 — photo 24",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-09.jpg",
+        "alt": "Begins 2025 — photo 25",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-26.jpg",
+        "alt": "Begins 2025 — photo 26",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-27.jpg",
+        "alt": "Begins 2025 — photo 27",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-28.jpg",
+        "alt": "Begins 2025 — photo 28",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-11.jpg",
+        "alt": "Begins 2025 — photo 29",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-30.jpg",
+        "alt": "Begins 2025 — photo 30",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-31.jpg",
+        "alt": "Begins 2025 — photo 31",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-32.jpg",
+        "alt": "Begins 2025 — photo 32",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-33.jpg",
+        "alt": "Begins 2025 — photo 33",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-extra-34.jpg",
+        "alt": "Begins 2025 — photo 34",
         "caption": "",
         "captionI18n": {},
         "tag": "",
@@ -128,7 +320,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-03.jpg",
+        "src": "uploads/croisette-2025-extra-03.jpg",
         "alt": "La Croisette 2025 — photo 3",
         "caption": "",
         "captionI18n": {},
@@ -136,7 +328,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-04.jpg",
+        "src": "uploads/croisette-2025-03.jpg",
         "alt": "La Croisette 2025 — photo 4",
         "caption": "",
         "captionI18n": {},
@@ -144,7 +336,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-05.jpg",
+        "src": "uploads/croisette-2025-extra-05.jpg",
         "alt": "La Croisette 2025 — photo 5",
         "caption": "",
         "captionI18n": {},
@@ -152,7 +344,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-06.jpg",
+        "src": "uploads/croisette-2025-04.jpg",
         "alt": "La Croisette 2025 — photo 6",
         "caption": "",
         "captionI18n": {},
@@ -160,7 +352,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-07.jpg",
+        "src": "uploads/croisette-2025-extra-07.jpg",
         "alt": "La Croisette 2025 — photo 7",
         "caption": "",
         "captionI18n": {},
@@ -168,7 +360,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-08.jpg",
+        "src": "uploads/croisette-2025-05.jpg",
         "alt": "La Croisette 2025 — photo 8",
         "caption": "",
         "captionI18n": {},
@@ -176,7 +368,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-09.jpg",
+        "src": "uploads/croisette-2025-06.jpg",
         "alt": "La Croisette 2025 — photo 9",
         "caption": "",
         "captionI18n": {},
@@ -184,8 +376,104 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/croisette-2025-10.jpg",
+        "src": "uploads/croisette-2025-extra-10.jpg",
         "alt": "La Croisette 2025 — photo 10",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-07.jpg",
+        "alt": "La Croisette 2025 — photo 11",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-12.jpg",
+        "alt": "La Croisette 2025 — photo 12",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-08.jpg",
+        "alt": "La Croisette 2025 — photo 13",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-14.jpg",
+        "alt": "La Croisette 2025 — photo 14",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-15.jpg",
+        "alt": "La Croisette 2025 — photo 15",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-16.jpg",
+        "alt": "La Croisette 2025 — photo 16",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-17.jpg",
+        "alt": "La Croisette 2025 — photo 17",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-09.jpg",
+        "alt": "La Croisette 2025 — photo 18",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-10.jpg",
+        "alt": "La Croisette 2025 — photo 19",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-20.jpg",
+        "alt": "La Croisette 2025 — photo 20",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-21.jpg",
+        "alt": "La Croisette 2025 — photo 21",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-extra-22.jpg",
+        "alt": "La Croisette 2025 — photo 22",
         "caption": "",
         "captionI18n": {},
         "tag": "",
@@ -266,7 +554,7 @@ window.BDE_GALLERIES = [
     "order": 4,
     "images": [
       {
-        "src": "uploads/gala-2026-208.jpg",
+        "src": "uploads/gala-2026-3.jpg",
         "alt": "Gala Dauphine 2026 — photo 1",
         "caption": "",
         "captionI18n": {},
@@ -274,7 +562,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2026-189.jpg",
+        "src": "uploads/gala-2026-4.jpg",
         "alt": "Gala Dauphine 2026 — photo 2",
         "caption": "",
         "captionI18n": {},
@@ -282,7 +570,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2026-338.jpg",
+        "src": "uploads/gala-2026-5.jpg",
         "alt": "Gala Dauphine 2026 — photo 3",
         "caption": "",
         "captionI18n": {},
@@ -290,7 +578,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2026-332.jpg",
+        "src": "uploads/gala-2026-7.jpg",
         "alt": "Gala Dauphine 2026 — photo 4",
         "caption": "",
         "captionI18n": {},
@@ -298,7 +586,7 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2026-236.jpg",
+        "src": "uploads/gala-2026-10.jpg",
         "alt": "Gala Dauphine 2026 — photo 5",
         "caption": "",
         "captionI18n": {},
@@ -306,8 +594,392 @@ window.BDE_GALLERIES = [
         "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2026-248.jpg",
+        "src": "uploads/gala-2026-12.jpg",
         "alt": "Gala Dauphine 2026 — photo 6",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-14.jpg",
+        "alt": "Gala Dauphine 2026 — photo 7",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-20.jpg",
+        "alt": "Gala Dauphine 2026 — photo 8",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-22.jpg",
+        "alt": "Gala Dauphine 2026 — photo 9",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-23.jpg",
+        "alt": "Gala Dauphine 2026 — photo 10",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-30.jpg",
+        "alt": "Gala Dauphine 2026 — photo 11",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-31.jpg",
+        "alt": "Gala Dauphine 2026 — photo 12",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-42.jpg",
+        "alt": "Gala Dauphine 2026 — photo 13",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-45.jpg",
+        "alt": "Gala Dauphine 2026 — photo 14",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-47.jpg",
+        "alt": "Gala Dauphine 2026 — photo 15",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-52.jpg",
+        "alt": "Gala Dauphine 2026 — photo 16",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-57.jpg",
+        "alt": "Gala Dauphine 2026 — photo 17",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-62.jpg",
+        "alt": "Gala Dauphine 2026 — photo 18",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-67.jpg",
+        "alt": "Gala Dauphine 2026 — photo 19",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-82.jpg",
+        "alt": "Gala Dauphine 2026 — photo 20",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-83.jpg",
+        "alt": "Gala Dauphine 2026 — photo 21",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-84.jpg",
+        "alt": "Gala Dauphine 2026 — photo 22",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-86.jpg",
+        "alt": "Gala Dauphine 2026 — photo 23",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-87.jpg",
+        "alt": "Gala Dauphine 2026 — photo 24",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-106.jpg",
+        "alt": "Gala Dauphine 2026 — photo 25",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-107.jpg",
+        "alt": "Gala Dauphine 2026 — photo 26",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-130.jpg",
+        "alt": "Gala Dauphine 2026 — photo 27",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-149.jpg",
+        "alt": "Gala Dauphine 2026 — photo 28",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-156.jpg",
+        "alt": "Gala Dauphine 2026 — photo 29",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-180.jpg",
+        "alt": "Gala Dauphine 2026 — photo 30",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-189.jpg",
+        "alt": "Gala Dauphine 2026 — photo 31",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-194.jpg",
+        "alt": "Gala Dauphine 2026 — photo 32",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-196.jpg",
+        "alt": "Gala Dauphine 2026 — photo 33",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-208.jpg",
+        "alt": "Gala Dauphine 2026 — photo 34",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-212.jpg",
+        "alt": "Gala Dauphine 2026 — photo 35",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-213.jpg",
+        "alt": "Gala Dauphine 2026 — photo 36",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-215.jpg",
+        "alt": "Gala Dauphine 2026 — photo 37",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-217.jpg",
+        "alt": "Gala Dauphine 2026 — photo 38",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-218.jpg",
+        "alt": "Gala Dauphine 2026 — photo 39",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-221.jpg",
+        "alt": "Gala Dauphine 2026 — photo 40",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-231.jpg",
+        "alt": "Gala Dauphine 2026 — photo 41",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-236.jpg",
+        "alt": "Gala Dauphine 2026 — photo 42",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-248.jpg",
+        "alt": "Gala Dauphine 2026 — photo 43",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-255.jpg",
+        "alt": "Gala Dauphine 2026 — photo 44",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-257.jpg",
+        "alt": "Gala Dauphine 2026 — photo 45",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-259.jpg",
+        "alt": "Gala Dauphine 2026 — photo 46",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-291.jpg",
+        "alt": "Gala Dauphine 2026 — photo 47",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-304.jpg",
+        "alt": "Gala Dauphine 2026 — photo 48",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-313.jpg",
+        "alt": "Gala Dauphine 2026 — photo 49",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-319.jpg",
+        "alt": "Gala Dauphine 2026 — photo 50",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-332.jpg",
+        "alt": "Gala Dauphine 2026 — photo 51",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-338.jpg",
+        "alt": "Gala Dauphine 2026 — photo 52",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-343.jpg",
+        "alt": "Gala Dauphine 2026 — photo 53",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-345.jpg",
+        "alt": "Gala Dauphine 2026 — photo 54",
         "caption": "",
         "captionI18n": {},
         "tag": "",
