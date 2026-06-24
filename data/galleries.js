@@ -12,58 +12,90 @@ window.BDE_GALLERIES = [
     "title": "Begins",
     "page": "galerie-begins.html",
     "eventSlug": "begins",
-    "coverImage": "uploads/photos_now-1777708863357.jpg",
+    "coverImage": "uploads/begins-2025-05.jpg",
     "googlePhotosUrl": "https://photos.google.com/",
     "lightboxMode": "overlay",
     "active": true,
     "order": 1,
     "images": [
       {
-        "src": "uploads/photos_now-1777708863357.jpg",
-        "alt": "Begins 2026",
-        "caption": "Les premiers instants de la promotion",
+        "src": "uploads/begins-2025-01.jpg",
+        "alt": "Begins 2025 — photo 1",
+        "caption": "",
         "captionI18n": {},
-        "tag": "Begins · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04314-scaled.jpg",
-        "alt": "Begins 2026",
-        "caption": "Rencontres et lancement d'année",
+        "src": "uploads/begins-2025-02.jpg",
+        "alt": "Begins 2025 — photo 2",
+        "caption": "",
         "captionI18n": {},
-        "tag": "Begins · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04346-scaled.jpg",
-        "alt": "Begins 2026",
-        "caption": "Découvrir les visages du BDE",
+        "src": "uploads/begins-2025-03.jpg",
+        "alt": "Begins 2025 — photo 3",
+        "caption": "",
         "captionI18n": {},
-        "tag": "Begins · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04479-scaled.jpg",
-        "alt": "Begins 2026",
-        "caption": "Premiers liens, première ambiance",
+        "src": "uploads/begins-2025-04.jpg",
+        "alt": "Begins 2025 — photo 4",
+        "caption": "",
         "captionI18n": {},
-        "tag": "Begins · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04545-scaled.jpg",
-        "alt": "Begins 2026",
-        "caption": "Une année qui commence ensemble",
+        "src": "uploads/begins-2025-05.jpg",
+        "alt": "Begins 2025 — photo 5",
+        "caption": "",
         "captionI18n": {},
-        "tag": "Begins · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04582-scaled.jpg",
-        "alt": "Begins 2026",
-        "caption": "Découverte, accueil et cohésion",
+        "src": "uploads/begins-2025-06.jpg",
+        "alt": "Begins 2025 — photo 6",
+        "caption": "",
         "captionI18n": {},
-        "tag": "Begins · 2026",
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-07.jpg",
+        "alt": "Begins 2025 — photo 7",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-08.jpg",
+        "alt": "Begins 2025 — photo 8",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-09.jpg",
+        "alt": "Begins 2025 — photo 9",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/begins-2025-11.jpg",
+        "alt": "Begins 2025 — photo 10",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
         "tagI18n": {}
       }
     ]
@@ -73,58 +105,90 @@ window.BDE_GALLERIES = [
     "title": "La Croisette",
     "page": "galerie-croisette.html",
     "eventSlug": "croisette",
-    "coverImage": "uploads/DSC04545-scaled.jpg",
+    "coverImage": "uploads/croisette-2025-01.jpg",
     "googlePhotosUrl": "https://photos.google.com/",
     "lightboxMode": "overlay",
     "active": true,
     "order": 2,
     "images": [
       {
-        "src": "uploads/DSC04545-scaled.jpg",
-        "alt": "La Croisette 2026",
-        "caption": "La Seine au coucher du soleil",
+        "src": "uploads/croisette-2025-01.jpg",
+        "alt": "La Croisette 2025 — photo 1",
+        "caption": "",
         "captionI18n": {},
-        "tag": "La Croisette · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04479-scaled.jpg",
-        "alt": "La Croisette 2026",
-        "caption": "Ambiance sur le pont",
+        "src": "uploads/croisette-2025-02.jpg",
+        "alt": "La Croisette 2025 — photo 2",
+        "caption": "",
         "captionI18n": {},
-        "tag": "La Croisette · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04433-scaled.jpg",
-        "alt": "La Croisette 2026",
-        "caption": "Les premières rencontres",
+        "src": "uploads/croisette-2025-03.jpg",
+        "alt": "La Croisette 2025 — photo 3",
+        "caption": "",
         "captionI18n": {},
-        "tag": "La Croisette · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04400-scaled.jpg",
-        "alt": "La Croisette 2026",
-        "caption": "Panorama parisien",
+        "src": "uploads/croisette-2025-04.jpg",
+        "alt": "La Croisette 2025 — photo 4",
+        "caption": "",
         "captionI18n": {},
-        "tag": "La Croisette · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04346-scaled.jpg",
-        "alt": "La Croisette 2026",
-        "caption": "La fête commence",
+        "src": "uploads/croisette-2025-05.jpg",
+        "alt": "La Croisette 2025 — photo 5",
+        "caption": "",
         "captionI18n": {},
-        "tag": "La Croisette · 2026",
+        "tag": "",
         "tagI18n": {}
       },
       {
-        "src": "uploads/DSC04314-scaled.jpg",
-        "alt": "La Croisette 2026",
-        "caption": "Dauphine à bord",
+        "src": "uploads/croisette-2025-06.jpg",
+        "alt": "La Croisette 2025 — photo 6",
+        "caption": "",
         "captionI18n": {},
-        "tag": "La Croisette · 2026",
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-07.jpg",
+        "alt": "La Croisette 2025 — photo 7",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-08.jpg",
+        "alt": "La Croisette 2025 — photo 8",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-09.jpg",
+        "alt": "La Croisette 2025 — photo 9",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/croisette-2025-10.jpg",
+        "alt": "La Croisette 2025 — photo 10",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
         "tagI18n": {}
       }
     ]
@@ -195,67 +259,59 @@ window.BDE_GALLERIES = [
     "title": "Gala Dauphine",
     "page": "galerie-gala.html",
     "eventSlug": "gala",
-    "coverImage": "uploads/gala-2025-259.jpg",
+    "coverImage": "uploads/gala-2026-259.jpg",
     "googlePhotosUrl": "https://photos.google.com/",
     "lightboxMode": "lightbox",
     "active": true,
     "order": 4,
     "images": [
       {
-        "src": "uploads/gala-2025-189.jpg",
-        "alt": "Groupe d'étudiants au Gala Dauphine 2025",
-        "caption": "Une promotion réunie pour la soirée de l'année",
-        "captionI18n": {
-          "fr": "Une promotion réunie pour la soirée de l'année",
-          "en": "A class reunited for the event of the year"
-        },
-        "tag": "Gala · 2025",
-        "tagI18n": {
-          "fr": "Gala · 2025",
-          "en": "Gala · 2025"
-        }
+        "src": "uploads/gala-2026-208.jpg",
+        "alt": "Gala Dauphine 2026 — photo 1",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2025-208.jpg",
-        "alt": "Étudiants en tenue de soirée au Gala Dauphine 2025",
-        "caption": "Tenues de soirée et souvenirs partagés",
-        "captionI18n": {
-          "fr": "Tenues de soirée et souvenirs partagés",
-          "en": "Evening wear and shared memories"
-        },
-        "tag": "Élégance",
-        "tagI18n": {
-          "fr": "Élégance",
-          "en": "Elegance"
-        }
+        "src": "uploads/gala-2026-189.jpg",
+        "alt": "Gala Dauphine 2026 — photo 2",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2025-332.jpg",
-        "alt": "Piste de danse du Gala Dauphine 2025",
-        "caption": "Le bal bat son plein au Chalet du Lac",
-        "captionI18n": {
-          "fr": "Le bal bat son plein au Chalet du Lac",
-          "en": "The ball in full swing at Chalet du Lac"
-        },
-        "tag": "Bal",
-        "tagI18n": {
-          "fr": "Bal",
-          "en": "Ball"
-        }
+        "src": "uploads/gala-2026-338.jpg",
+        "alt": "Gala Dauphine 2026 — photo 3",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
       },
       {
-        "src": "uploads/gala-2025-248.jpg",
-        "alt": "Vue d'ensemble du Gala Dauphine 2025",
-        "caption": "Le Chalet du Lac rempli par la communauté dauphinoise",
-        "captionI18n": {
-          "fr": "Le Chalet du Lac rempli par la communauté dauphinoise",
-          "en": "Chalet du Lac filled with the Dauphine community"
-        },
-        "tag": "Vue d'ensemble",
-        "tagI18n": {
-          "fr": "Vue d'ensemble",
-          "en": "Wide view"
-        }
+        "src": "uploads/gala-2026-332.jpg",
+        "alt": "Gala Dauphine 2026 — photo 4",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-236.jpg",
+        "alt": "Gala Dauphine 2026 — photo 5",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
+      },
+      {
+        "src": "uploads/gala-2026-248.jpg",
+        "alt": "Gala Dauphine 2026 — photo 6",
+        "caption": "",
+        "captionI18n": {},
+        "tag": "",
+        "tagI18n": {}
       }
     ]
   },
