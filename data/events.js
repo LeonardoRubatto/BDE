@@ -1,6 +1,6 @@
 // =====================================================
 // ÉVÉNEMENTS
-// Généré automatiquement par sync.py le 18/05/2026 10:00
+// Généré automatiquement par sync.py le 24/06/2026 09:33
 // Modifier via csv/events.csv, csv/event_descriptions.csv,
 // csv/event_meta.csv, csv/event_tags.csv, csv/event_artists.csv
 // ou directement dans ce fichier.
@@ -8,6 +8,121 @@
 // =====================================================
 
 window.BDE_EVENTS = [
+  {
+    "slug": "croisette",
+    "order": 1,
+    "number": "01",
+    "title": "La Croisette",
+    "subtitle": "Croisière sur la Seine · Soirée d'intégration",
+    "category": "Début d'année",
+    "date": "",
+    "dateLabel": {
+      "fr": "",
+      "en": ""
+    },
+    "statusLabel": {
+      "fr": "",
+      "en": ""
+    },
+    "statusColor": "",
+    "place": "Paris",
+    "venue": "BIBI",
+    "shortDescription": "Croisière sur la Seine · Soirée d'intégration",
+    "homeDescriptionI18n": {
+      "fr": "Croisière sur la Seine · Soirée d'intégration",
+      "en": "River cruise on the Seine · Integration party"
+    },
+    "homePeriod": "Début d'année",
+    "homePeriodI18n": {
+      "fr": "Début d'année",
+      "en": "Start of year"
+    },
+    "longDescription": [
+      "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI."
+    ],
+    "descriptionBlocks": [
+      {
+        "text": "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
+        "i18n": {
+          "fr": "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
+          "en": "The very first event of the year. A river cruise on the Seine allows new arrivals to discover the student associations and the Dauphine community. A first taste of the BDE world before the big WEI."
+        }
+      }
+    ],
+    "image": "uploads/croisette-2025-01.jpg",
+    "images": [
+      "uploads/croisette-2025-01.jpg",
+      "uploads/croisette-2025-02.jpg",
+      "uploads/croisette-2025-07.jpg"
+    ],
+    "alt": "La Croisette",
+    "ticketUrl": "",
+    "ticketLabel": "Réserver",
+    "dossierUrl": "",
+    "dossierLabel": {
+      "fr": "Dossier à remplir",
+      "en": "Form to complete"
+    },
+    "dossierDownload": true,
+    "googlePhotosUrl": "",
+    "galleryPage": "galerie-croisette.html",
+    "galleryLabel": "Galerie photos des éditions →",
+    "showOnHome": true,
+    "showOnEventsPage": true,
+    "showOnNuitsPage": false,
+    "featured": false,
+    "status": "current",
+    "tags": [
+      {
+        "label": "Début d'année",
+        "red": false,
+        "i18n": {
+          "fr": "Début d'année",
+          "en": "Start of year"
+        }
+      }
+    ],
+    "meta": [
+      {
+        "key": "Format",
+        "value": "Croisière sur la Seine",
+        "keyI18n": {
+          "fr": "Format",
+          "en": "Format"
+        },
+        "valueI18n": {
+          "fr": "Croisière sur la Seine",
+          "en": "River cruise on the Seine"
+        }
+      },
+      {
+        "key": "Période",
+        "value": "Début d'année universitaire",
+        "keyI18n": {
+          "fr": "Période",
+          "en": "Period"
+        },
+        "valueI18n": {
+          "fr": "Début d'année universitaire",
+          "en": "Start of the academic year"
+        }
+      },
+      {
+        "key": "Ambiance",
+        "value": "Rencontre, découverte, cohésion",
+        "keyI18n": {
+          "fr": "Ambiance",
+          "en": "Atmosphere"
+        },
+        "valueI18n": {
+          "fr": "Rencontre, découverte, cohésion",
+          "en": "Meeting, discovery, bonding"
+        }
+      }
+    ],
+    "artists": [],
+    "reverse": false
+  },
   {
     "slug": "begins",
     "order": 2,
@@ -49,11 +164,10 @@ window.BDE_EVENTS = [
         }
       }
     ],
-    "image": "uploads/begins-2025-05.jpg",
+    "image": "uploads/begins-2025-04.jpg",
     "images": [
-      "uploads/begins-2025-05.jpg",
+      "uploads/begins-2025-04.jpg",
       "uploads/begins-2025-02.jpg",
-      "uploads/begins-2025-06.jpg",
       "uploads/begins-2025-09.jpg"
     ],
     "alt": "Begins",
@@ -130,122 +244,6 @@ window.BDE_EVENTS = [
         "valueI18n": {
           "fr": "Accueil, découverte, cohésion",
           "en": "Welcome, discovery, bonding"
-        }
-      }
-    ],
-    "artists": [],
-    "reverse": false
-  },
-  {
-    "slug": "croisette",
-    "order": 1,
-    "number": "01",
-    "title": "La Croisette",
-    "subtitle": "Croisière sur la Seine · Soirée d'intégration",
-    "category": "Début d'année",
-    "date": "",
-    "dateLabel": {
-      "fr": "",
-      "en": ""
-    },
-    "statusLabel": {
-      "fr": "",
-      "en": ""
-    },
-    "statusColor": "",
-    "place": "Paris",
-    "venue": "BIBI",
-    "shortDescription": "Croisière sur la Seine · Soirée d'intégration",
-    "homeDescriptionI18n": {
-      "fr": "Croisière sur la Seine · Soirée d'intégration",
-      "en": "River cruise on the Seine · Integration party"
-    },
-    "homePeriod": "Début d'année",
-    "homePeriodI18n": {
-      "fr": "Début d'année",
-      "en": "Start of year"
-    },
-    "longDescription": [
-      "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI."
-    ],
-    "descriptionBlocks": [
-      {
-        "text": "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
-        "i18n": {
-          "fr": "Le tout premier événement de l'année. Une croisière sur la Seine permet aux nouveaux arrivants de découvrir les associatifs et la communauté Dauphine. L'occasion de mettre un premier pied dans l'univers du BDE avant le grand WEI.",
-          "en": "The very first event of the year. A river cruise on the Seine allows new arrivals to discover the student associations and the Dauphine community. A first taste of the BDE world before the big WEI."
-        }
-      }
-    ],
-    "image": "uploads/croisette-2025-01.jpg",
-    "images": [
-      "uploads/croisette-2025-01.jpg",
-      "uploads/croisette-2025-02.jpg",
-      "uploads/croisette-2025-03.jpg",
-      "uploads/croisette-2025-07.jpg"
-    ],
-    "alt": "La Croisette",
-    "ticketUrl": "",
-    "ticketLabel": "Réserver",
-    "dossierUrl": "",
-    "dossierLabel": {
-      "fr": "Dossier à remplir",
-      "en": "Form to complete"
-    },
-    "dossierDownload": true,
-    "googlePhotosUrl": "",
-    "galleryPage": "galerie-croisette.html",
-    "galleryLabel": "Galerie photos des éditions →",
-    "showOnHome": true,
-    "showOnEventsPage": true,
-    "showOnNuitsPage": false,
-    "featured": false,
-    "status": "current",
-    "tags": [
-      {
-        "label": "Début d'année",
-        "red": false,
-        "i18n": {
-          "fr": "Début d'année",
-          "en": "Start of year"
-        }
-      }
-    ],
-    "meta": [
-      {
-        "key": "Format",
-        "value": "Croisière sur la Seine",
-        "keyI18n": {
-          "fr": "Format",
-          "en": "Format"
-        },
-        "valueI18n": {
-          "fr": "Croisière sur la Seine",
-          "en": "River cruise on the Seine"
-        }
-      },
-      {
-        "key": "Période",
-        "value": "Début d'année universitaire",
-        "keyI18n": {
-          "fr": "Période",
-          "en": "Period"
-        },
-        "valueI18n": {
-          "fr": "Début d'année universitaire",
-          "en": "Start of the academic year"
-        }
-      },
-      {
-        "key": "Ambiance",
-        "value": "Rencontre, découverte, cohésion",
-        "keyI18n": {
-          "fr": "Ambiance",
-          "en": "Atmosphere"
-        },
-        "valueI18n": {
-          "fr": "Rencontre, découverte, cohésion",
-          "en": "Meeting, discovery, bonding"
         }
       }
     ],
@@ -738,7 +736,6 @@ window.BDE_EVENTS = [
     "image": "uploads/gala-2026-259.jpg",
     "images": [
       "uploads/gala-2026-259.jpg",
-      "uploads/gala-2026-236.jpg",
       "uploads/gala-2026-248.jpg",
       "uploads/gala-2026-338.jpg"
     ],
