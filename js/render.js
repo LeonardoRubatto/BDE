@@ -73,7 +73,18 @@
     return (((window.BDE_ARTISTS||{}).textStrip)||[]).map(n=>`<span class="artist-text-item">${esc(n)}</span><span class="artist-text-sep">·</span>`).join('');
   }
   function homeGalleryStrip(){
-    const imgs=[]; (window.BDE_GALLERIES||[]).filter(g=>g.active!==false).forEach(g=>(g.images||[]).forEach(im=>{if(imgs.length<18 && im.src && !imgs.some(x=>x.src===im.src)) imgs.push(im);}));
+    const galleries=(window.BDE_GALLERIES||[]).filter(g=>g.active!==false).map(g=>{
+      const cover=g.coverImage?{src:g.coverImage,alt:g.title||''}:null;
+      return [cover,...(g.images||[])].filter(Boolean);
+    });
+    const imgs=[];
+    const maxLength=Math.max(0,...galleries.map(list=>list.length));
+    for(let i=0;i<maxLength&&imgs.length<18;i++){
+      galleries.forEach(list=>{
+        const im=list[i];
+        if(im?.src&&!imgs.some(x=>x.src===im.src)&&imgs.length<18) imgs.push(im);
+      });
+    }
     return imgs.map(im=>`<div class="galerie-strip-item"><img src="${esc(im.src)}" alt="${esc(im.alt||'')}" /></div>`).join('');
   }
   function renderGallery(el){
@@ -81,10 +92,12 @@
     const g=(window.BDE_GALLERIES||[]).find(x=>x.slug===slug);
     if(!g) return;
     el.innerHTML=(g.images||[]).map((im,i)=>{
+      const hasCaption=Boolean(im.tag||im.caption);
+      const caption=hasCaption?`<div class="gallery-item-caption"><div class="caption-tag gallery-caption-tag"${attrI18n(im.tagI18n?.fr||im.tag,im.tagI18n?.en||'')}>${esc(im.tag)}</div><p class="gallery-caption-text"${attrI18n(im.captionI18n?.fr||im.caption,im.captionI18n?.en||'')}>${esc(im.caption)}</p></div>`:'';
       if(g.lightboxMode==='lightbox'){
-        return `<div class="gallery-item" onclick="openLightbox(${i})"><img src="${esc(im.src)}" alt="${esc(im.alt)}" /><div class="gallery-item-caption"><div class="caption-tag gallery-caption-tag"${attrI18n(im.tagI18n?.fr||im.tag,im.tagI18n?.en||'')}>${esc(im.tag)}</div><p class="gallery-caption-text"${attrI18n(im.captionI18n?.fr||im.caption,im.captionI18n?.en||'')}>${esc(im.caption)}</p></div></div>`;
+        return `<div class="gallery-item" onclick="openLightbox(${i})"><img src="${esc(im.src)}" alt="${esc(im.alt)}" loading="lazy" />${caption}</div>`;
       }
-      return `<div class="gallery-item" data-src="${esc(im.src)}" data-caption="${esc(im.caption)}"><img src="${esc(im.src)}" alt="${esc(im.alt)}" loading="lazy" /><div class="gallery-item-caption"><div class="caption-tag"${attrI18n(im.tagI18n?.fr||im.tag,im.tagI18n?.en||'')}>${esc(im.tag)}</div><p${attrI18n(im.captionI18n?.fr||im.caption,im.captionI18n?.en||'')}>${esc(im.caption)}</p></div></div>`;
+      return `<div class="gallery-item" data-src="${esc(im.src)}" data-caption="${esc(im.caption)}"><img src="${esc(im.src)}" alt="${esc(im.alt)}" loading="lazy" />${caption}</div>`;
     }).join('');
   }
   window.BDE_RENDER_ALL=function(){

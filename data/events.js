@@ -49,11 +49,12 @@ window.BDE_EVENTS = [
         }
       }
     ],
-    "image": "uploads/photos_now-1777708863357.jpg",
+    "image": "uploads/begins-2025-05.jpg",
     "images": [
-      "uploads/photos_now-1777708863357.jpg",
-      "uploads/DSC04314-scaled.jpg",
-      "uploads/DSC04346-scaled.jpg"
+      "uploads/begins-2025-05.jpg",
+      "uploads/begins-2025-02.jpg",
+      "uploads/begins-2025-06.jpg",
+      "uploads/begins-2025-09.jpg"
     ],
     "alt": "Begins",
     "ticketUrl": "",
@@ -176,11 +177,12 @@ window.BDE_EVENTS = [
         }
       }
     ],
-    "image": "uploads/DSC04545-scaled.jpg",
+    "image": "uploads/croisette-2025-01.jpg",
     "images": [
-      "uploads/DSC04545-scaled.jpg",
-      "uploads/DSC04582-scaled.jpg",
-      "uploads/DSC04400-scaled.jpg"
+      "uploads/croisette-2025-01.jpg",
+      "uploads/croisette-2025-02.jpg",
+      "uploads/croisette-2025-03.jpg",
+      "uploads/croisette-2025-07.jpg"
     ],
     "alt": "La Croisette",
     "ticketUrl": "",
@@ -715,7 +717,7 @@ window.BDE_EVENTS = [
     },
     "longDescription": [
       "Le Gala est l'événement de prestige de l'année. Cérémonie d'adieu pour les M2 en présence de l'administration, puis bal dansant ouvert à toute la communauté — des L1 aux M2. Plusieurs salles, plusieurs ambiances, un lieu d'exception.",
-      "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes."
+      "L'édition 2026 au Chalet du Lac a réuni 1 500 personnes."
     ],
     "descriptionBlocks": [
       {
@@ -726,21 +728,21 @@ window.BDE_EVENTS = [
         }
       },
       {
-        "text": "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes.",
+        "text": "L'édition 2026 au Chalet du Lac a réuni 1 500 personnes.",
         "i18n": {
-          "fr": "L'édition 2025 au Chalet du Lac a réuni 1 500 personnes.",
-          "en": "The 2025 edition at Chalet du Lac brought together 1,500 people."
+          "fr": "L'édition 2026 au Chalet du Lac a réuni 1 500 personnes.",
+          "en": "The 2026 edition at Chalet du Lac brought together 1,500 people."
         }
       }
     ],
-    "image": "uploads/gala-2025-259.jpg",
+    "image": "uploads/gala-2026-259.jpg",
     "images": [
-      "uploads/gala-2025-259.jpg",
-      "uploads/gala-2025-236.jpg",
-      "uploads/gala-2025-248.jpg",
-      "uploads/gala-2025-338.jpg"
+      "uploads/gala-2026-259.jpg",
+      "uploads/gala-2026-236.jpg",
+      "uploads/gala-2026-248.jpg",
+      "uploads/gala-2026-338.jpg"
     ],
-    "alt": "Gala Dauphine 2025",
+    "alt": "Gala Dauphine 2026",
     "ticketUrl": "",
     "ticketLabel": "Réserver",
     "dossierUrl": "",
@@ -801,11 +803,11 @@ window.BDE_EVENTS = [
         }
       },
       {
-        "key": "Participants 2025",
+        "key": "Participants 2026",
         "value": "1 500+",
         "keyI18n": {
-          "fr": "Participants 2025",
-          "en": "2025 Attendees"
+          "fr": "Participants 2026",
+          "en": "2026 Attendees"
         },
         "valueI18n": {
           "fr": "1 500+",
