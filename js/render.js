@@ -73,7 +73,10 @@
     return (((window.BDE_ARTISTS||{}).textStrip)||[]).map(n=>`<span class="artist-text-item">${esc(n)}</span><span class="artist-text-sep">·</span>`).join('');
   }
   function homeGalleryStrip(){
-    const galleries=(window.BDE_GALLERIES||[]).filter(g=>g.active!==false).map(g=>{
+    const homeStripGallerySlugs=new Set(['begins','croisette','gala']);
+    const galleries=(window.BDE_GALLERIES||[])
+      .filter(g=>g.active!==false&&homeStripGallerySlugs.has(g.slug))
+      .map(g=>{
       const cover=g.coverImage?{src:g.coverImage,alt:g.title||''}:null;
       return [cover,...(g.images||[])].filter(Boolean);
     });
