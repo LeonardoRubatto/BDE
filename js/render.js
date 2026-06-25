@@ -95,8 +95,8 @@
         if(im?.src&&!imgs.some(x=>x.src===im.src)) imgs.push(im);
       });
     }
-    const pinned=imgs.slice(0,6);
-    const random=imgs.slice(6);
+    const pinned=imgs.slice(0,3);
+    const random=imgs.slice(3);
     for(let i=random.length-1;i>0;i--){
       const j=Math.floor(Math.random()*(i+1));
       [random[i],random[j]]=[random[j],random[i]];
