@@ -74,21 +74,35 @@
   }
   function homeGalleryStrip(){
     const homeStripGallerySlugs=new Set(['begins','croisette','gala']);
+    const homeStripExcludedImages=new Set([
+      'uploads/begins-2025-extra-01.jpg',
+      'uploads/gala-2026-3.jpg',
+      'uploads/begins-2025-extra-02.jpg',
+      'uploads/gala-2026-5.jpg',
+      'uploads/begins-2025-extra-04.jpg'
+    ]);
     const galleries=(window.BDE_GALLERIES||[])
       .filter(g=>g.active!==false&&homeStripGallerySlugs.has(g.slug))
       .map(g=>{
       const cover=g.coverImage?{src:g.coverImage,alt:g.title||''}:null;
-      return [cover,...(g.images||[])].filter(Boolean);
+      return [cover,...(g.images||[])].filter(Boolean).filter(im=>!homeStripExcludedImages.has(im.src));
     });
     const imgs=[];
     const maxLength=Math.max(0,...galleries.map(list=>list.length));
-    for(let i=0;i<maxLength&&imgs.length<18;i++){
+    for(let i=0;i<maxLength;i++){
       galleries.forEach(list=>{
         const im=list[i];
-        if(im?.src&&!imgs.some(x=>x.src===im.src)&&imgs.length<18) imgs.push(im);
+        if(im?.src&&!imgs.some(x=>x.src===im.src)) imgs.push(im);
       });
     }
-    return imgs.map(im=>`<div class="galerie-strip-item"><img src="${esc(im.src)}" alt="${esc(im.alt||'')}" /></div>`).join('');
+    const fourthImage=imgs.find(im=>im.src==='uploads/gala-2026-338.jpg');
+    const pinned=[...imgs.slice(0,3),fourthImage].filter(Boolean);
+    const random=imgs.slice(3).filter(im=>im.src!==fourthImage?.src);
+    for(let i=random.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [random[i],random[j]]=[random[j],random[i]];
+    }
+    return [...pinned,...random].slice(0,18).map(im=>`<div class="galerie-strip-item"><img src="${esc(im.src)}" alt="${esc(im.alt||'')}" /></div>`).join('');
   }
   function renderGallery(el){
     const slug=el.dataset.gallerySlug;
