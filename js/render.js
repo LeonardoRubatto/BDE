@@ -95,8 +95,9 @@
         if(im?.src&&!imgs.some(x=>x.src===im.src)) imgs.push(im);
       });
     }
-    const pinned=imgs.slice(0,3);
-    const random=imgs.slice(3);
+    const fourthImage=imgs.find(im=>im.src==='uploads/gala-2026-338.jpg');
+    const pinned=[...imgs.slice(0,3),fourthImage].filter(Boolean);
+    const random=imgs.slice(3).filter(im=>im.src!==fourthImage?.src);
     for(let i=random.length-1;i>0;i--){
       const j=Math.floor(Math.random()*(i+1));
       [random[i],random[j]]=[random[j],random[i]];
