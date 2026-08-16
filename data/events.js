@@ -15,10 +15,10 @@ window.BDE_EVENTS = [
     "title": "La Croisette",
     "subtitle": "Croisière sur la Seine · Soirée d'intégration",
     "category": "Début d'année",
-    "date": "",
+    "date": "2026-09-15",
     "dateLabel": {
-      "fr": "",
-      "en": ""
+      "fr": "Mardi 15 septembre 2026",
+      "en": "Tuesday, September 15, 2026"
     },
     "statusLabel": {
       "fr": "",
@@ -130,10 +130,10 @@ window.BDE_EVENTS = [
     "title": "Begins",
     "subtitle": "Lancement d'année · Rencontres · Découverte de la vie dauphinoise",
     "category": "Début d'année",
-    "date": "",
+    "date": "2026-09-24",
     "dateLabel": {
-      "fr": "",
-      "en": ""
+      "fr": "Jeudi 24 septembre 2026",
+      "en": "Thursday, September 24, 2026"
     },
     "statusLabel": {
       "fr": "",
