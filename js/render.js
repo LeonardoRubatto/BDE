@@ -117,6 +117,134 @@
       return `<div class="gallery-item" data-src="${esc(im.src)}" data-caption="${esc(im.caption)}"><img src="${esc(im.src)}" alt="${esc(im.alt)}" loading="lazy" />${caption}</div>`;
     }).join('');
   }
+
+  // ── AFFICHE ────────────────────────────────────────────────────
+  // Détermine quel événement doit voir son affiche présentée, et construit
+  // le contenu du <dialog>. La logique de fenêtre (J-14) vit ici parce
+  // qu'elle croise BDE_EVENTS et BDE_SITE ; le comportement (ouverture,
+  // animation, mémoire de session) vit dans js/affiche.js.
+  function afficheConfig(){
+    const c=(window.BDE_SITE||{}).affiche||{};
+    return {
+      active: c.active!==false,
+      daysBefore: c.daysBefore||14,
+      frequency: c.frequency||'session',
+      pages: c.pages||'toutes',
+      delayMs: typeof c.delayMs==='number'?c.delayMs:700
+    };
+  }
+  function daysUntil(date){
+    if(!date) return null;
+    const d=new Date(`${date}T00:00:00`);
+    if(Number.isNaN(d.getTime())) return null;
+    const today=new Date(); today.setHours(0,0,0,0);
+    return Math.round((d-today)/86400000);
+  }
+  // L'événement retenu : un « OUI » forcé d'abord, sinon le plus proche
+  // dont la fenêtre d'affichage est ouverte. Sans image, pas d'affiche.
+  function afficheEvent(){
+    const cfg=afficheConfig();
+    if(!cfg.active) return null;
+    const eligible=(window.BDE_EVENTS||[]).filter(e=>{
+      const a=e.affiche||{};
+      if(!a.image) return false;
+      const mode=String(a.mode||'AUTO').toUpperCase();
+      if(mode==='NON') return false;
+      if(mode==='OUI') return true;
+      const d=daysUntil(e.date);
+      return d!==null && d>=0 && d<=(a.daysBefore||cfg.daysBefore);
+    });
+    const forced=e=>String((e.affiche||{}).mode||'').toUpperCase()==='OUI'?0:1;
+    eligible.sort((a,b)=>{
+      if(forced(a)!==forced(b)) return forced(a)-forced(b);
+      const da=daysUntil(a.date), db=daysUntil(b.date);
+      if(da===null) return 1;
+      if(db===null) return -1;
+      return da-db;
+    });
+    return eligible[0]||null;
+  }
+  // Le prochain événement daté, quelle que soit la fenêtre — sert au modal
+  // Billets pour qu'il ne devienne jamais obsolète.
+  function nextDatedEvent(){
+    return (window.BDE_EVENTS||[])
+      .filter(e=>daysUntil(e.date)!==null && daysUntil(e.date)>=0)
+      .sort((a,b)=>daysUntil(a.date)-daysUntil(b.date))[0]||null;
+  }
+  function afficheCountdown(e,lang){
+    const d=daysUntil(e.date);
+    if(d===null) return '';
+    if(d===0) return lang==='en'?'Tonight':"C'est ce soir";
+    if(d===1) return lang==='en'?'Tomorrow':'Demain';
+    return lang==='en'?`In ${d} days`:`Dans ${d} jours`;
+  }
+  function afficheSubtitle(e,lang){
+    const parts=[eventDateText(e,lang), e.venue||e.place].filter(Boolean);
+    return parts.join(' · ');
+  }
+  // Même ligne, mais le lieu isolé dans son propre span pour être mis en
+  // avant. Version HTML réservée à l'affiche : le modal Billets continue
+  // d'utiliser afficheSubtitle(), qui reste du texte simple.
+  function afficheSubtitleHtml(e,lang){
+    const date=eventDateText(e,lang), venue=e.venue||e.place;
+    const parts=[];
+    if(date) parts.push(esc(date));
+    if(venue) parts.push(`<span class="affiche-venue">${esc(venue)}</span>`);
+    return parts.join(' · ');
+  }
+  // <picture> AVIF/WebP quand les variantes existent (make_affiche.py),
+  // sinon simple <img>. Pas de fetchpriority : l'affiche ne doit pas
+  // concurrencer l'image LCP du hero ; js/affiche.js la précharge et
+  // attend son décodage avant d'ouvrir.
+  function afficheImage(a,title){
+    const alt=a.alt||title;
+    // On n'annonce que les largeurs réellement présentes : make_affiche.py
+    // ne génère pas une variante plus large que l'image d'origine, et une
+    // entrée srcset qui pointe vers un fichier absent casse l'affichage.
+    // RATIO porte les dimensions réelles de l'image (ex. 1179/1462) : elles
+    // servent aussi à savoir quelles variantes make_affiche.py a pu créer,
+    // puisqu'il n'en génère jamais de plus large que l'original. Sans cette
+    // information, on sert l'image simple plutôt que d'annoncer des
+    // fichiers qui n'existent peut-être pas.
+    const intrinsic=parseInt(String(a.ratio||'').split('/')[0],10);
+    const widths=intrinsic>320?[640,960,1536].filter(w=>w<=intrinsic):[];
+    if(a.responsive && widths.length){
+      const base=String(a.image).replace(/\.[a-z0-9]+$/i,'');
+      const set=ext=>widths.map(w=>`${esc(base)}-${w}.${ext} ${w}w`).join(', ');
+      const sizes='(min-width: 900px) 40vw, 84vw';
+      return `<picture><source type="image/avif" srcset="${set('avif')}" sizes="${sizes}"><source type="image/webp" srcset="${set('webp')}" sizes="${sizes}"><img src="${esc(a.image)}" alt="${esc(alt)}" decoding="async" /></picture>`;
+    }
+    return `<img src="${esc(a.image)}" alt="${esc(alt)}" decoding="async" />`;
+  }
+  function afficheContent(){
+    const e=afficheEvent();
+    if(!e) return '';
+    const a=e.affiche||{}, site=window.BDE_SITE||{}, t=site.ticket||{};
+    const titleI=i18nObj(a.title), textI=i18nObj(a.text), ctaI=i18nObj(a.ctaLabel);
+    const titleFr=titleI.fr||e.title, titleEn=titleI.en||e.title;
+    const textFr=textI.fr?esc(textI.fr):afficheSubtitleHtml(e,'fr');
+    const textEn=textI.en?esc(textI.en):afficheSubtitleHtml(e,'en');
+    const ctaFr=ctaI.fr||t.buttonLabel||'Réserver sur Shotgun';
+    const ctaEn=ctaI.en||t.buttonLabelEn||'Book on Shotgun';
+    const url=a.ctaUrl||e.ticketUrl||t.url||site.defaultTicketUrl||'#';
+    const cdFr=afficheCountdown(e,'fr'), cdEn=afficheCountdown(e,'en');
+    const ratio=a.ratio||'2/3';
+    return `<div class="affiche-veil" aria-hidden="true"></div><span class="affiche-cursor" data-affiche-cursor aria-hidden="true"></span><div class="affiche-sheet" role="document">
+      <button type="button" class="affiche-close" data-affiche-close aria-label="Fermer">×</button>
+      <div class="affiche-grid">
+        <div class="affiche-poster-wrap"><div class="affiche-poster" style="aspect-ratio:${esc(ratio)}" data-affiche-poster>${afficheImage(a,e.title)}<span class="affiche-sheen" aria-hidden="true"></span></div></div>
+        <div class="affiche-panel">
+          <div class="affiche-overline" data-fr="Prochain événement" data-en="Next event">Prochain événement</div>
+          <h2 class="affiche-title" id="afficheTitle"${attrI18n(titleFr,titleEn)}>${esc(titleFr)}</h2>
+          <div class="affiche-text"${attrI18n(textFr,textEn)}>${textFr}</div>
+          ${cdFr?`<div class="affiche-countdown"${attrI18n(cdFr,cdEn)}>${esc(cdFr)}</div>`:''}
+          <a class="affiche-cta" href="${esc(url)}" target="_blank" rel="noopener"><span${attrI18n(ctaFr,ctaEn)}>${esc(ctaFr)}</span><span class="affiche-cta-arrow" aria-hidden="true">→</span></a>
+          <button type="button" class="affiche-dismiss" data-affiche-close data-fr="Continuer vers le site" data-en="Continue to the site">Continuer vers le site</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  window.BDE_AFFICHE={config:afficheConfig, event:afficheEvent, nextDatedEvent, daysUntil, subtitle:afficheSubtitle};
   window.BDE_RENDER_ALL=function(){
     document.querySelectorAll('[data-render="nav"]').forEach(el=>{el.innerHTML=window.BDEComponents.nav();});
     document.querySelectorAll('[data-render="footer"]').forEach(el=>{el.innerHTML=window.BDEComponents.footer();});
@@ -130,5 +258,6 @@
     document.querySelectorAll('[data-render="artists-text-strip"]').forEach(el=>{el.innerHTML=artistTextStrip();});
     document.querySelectorAll('[data-render="home-gallery-strip"]').forEach(el=>{el.innerHTML=homeGalleryStrip();});
     document.querySelectorAll('[data-render="gallery-masonry"]').forEach(renderGallery);
+    document.querySelectorAll('[data-render="affiche"]').forEach(el=>{el.innerHTML=afficheContent();});
   };
 })();

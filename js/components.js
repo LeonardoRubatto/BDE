@@ -35,7 +35,15 @@
     },
     ticketModal(){
       const site=window.BDE_SITE||{}, t=site.ticket||{};
-      return `<div class="modal-box"><div class="modal-header"><div><div class="label-sm" style="margin-bottom:8px;" data-fr="Billetterie" data-en="Ticketing">Billetterie</div><img src="${esc(site.logo)}" alt="BDE" style="height:28px;filter:brightness(0) invert(1);" /></div><button class="modal-close" onclick="closeModal()">×</button></div><div class="modal-body"><div class="modal-event-name">${esc(t.eventName)}</div><div class="modal-event-sub"${attrI18n(t.eventSub,t.eventSubEn)}>${esc(t.eventSub)}</div><div class="modal-cta-row"><a href="${esc(t.url||site.defaultTicketUrl)}" target="_blank" class="modal-shotgun-btn"><div class="modal-shotgun-left"><span class="modal-shotgun-name"${attrI18n(t.buttonLabel,t.buttonLabelEn)}>${esc(t.buttonLabel)}</span><span class="modal-shotgun-desc"${attrI18n(t.description,t.descriptionEn)}>${esc(t.description)}</span></div><span class="modal-arrow">→</span></a></div>${t.note?`<p class="modal-note"${attrI18n(t.note,t.noteEn)}>${esc(t.note)}</p>`:''}</div></div>`;
+      // Le modal Billets suit automatiquement le prochain événement daté
+      // (même source que l'affiche) ; site.ticket sert de repli quand plus
+      // aucun événement n'est à venir.
+      const aff=window.BDE_AFFICHE, next=aff?aff.nextDatedEvent():null;
+      const evName=next?next.title:t.eventName;
+      const evSub=next?aff.subtitle(next,'fr'):t.eventSub;
+      const evSubEn=next?aff.subtitle(next,'en'):t.eventSubEn;
+      const evUrl=(next&&next.ticketUrl)||t.url||site.defaultTicketUrl;
+      return `<div class="modal-box"><div class="modal-header"><div><div class="label-sm" style="margin-bottom:8px;" data-fr="Billetterie" data-en="Ticketing">Billetterie</div><img src="${esc(site.logo)}" alt="BDE" style="height:28px;filter:brightness(0) invert(1);" /></div><button class="modal-close" onclick="closeModal()">×</button></div><div class="modal-body"><div class="modal-event-name">${esc(evName)}</div><div class="modal-event-sub"${attrI18n(evSub,evSubEn)}>${esc(evSub)}</div><div class="modal-cta-row"><a href="${esc(evUrl)}" target="_blank" class="modal-shotgun-btn"><div class="modal-shotgun-left"><span class="modal-shotgun-name"${attrI18n(t.buttonLabel,t.buttonLabelEn)}>${esc(t.buttonLabel)}</span><span class="modal-shotgun-desc"${attrI18n(t.description,t.descriptionEn)}>${esc(t.description)}</span></div><span class="modal-arrow">→</span></a></div>${t.note?`<p class="modal-note"${attrI18n(t.note,t.noteEn)}>${esc(t.note)}</p>`:''}</div></div>`;
     },
     sponsorsMarquee(){
       const items=activeSponsors().map(s=>`<a href="${esc(s.url)}" target="_blank" class="sponsor-item"><div class="sponsor-logo-ph">${logoOrFallback(s)}</div><span class="sponsor-item-name">${esc(s.name)}</span></a>`).join('');

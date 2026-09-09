@@ -1,6 +1,6 @@
 // =====================================================
 // ÉVÉNEMENTS
-// Généré automatiquement par sync.py le 24/06/2026 09:33
+// Généré automatiquement par sync.py le 09/09/2026 18:03
 // Modifier via csv/events.csv, csv/event_descriptions.csv,
 // csv/event_meta.csv, csv/event_tags.csv, csv/event_artists.csv
 // ou directement dans ce fichier.
@@ -26,7 +26,7 @@ window.BDE_EVENTS = [
     },
     "statusColor": "",
     "place": "Paris",
-    "venue": "BIBI",
+    "venue": "River's King",
     "shortDescription": "Croisière sur la Seine · Soirée d'intégration",
     "homeDescriptionI18n": {
       "fr": "Croisière sur la Seine · Soirée d'intégration",
@@ -121,7 +121,28 @@ window.BDE_EVENTS = [
       }
     ],
     "artists": [],
-    "reverse": false
+    "reverse": false,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "uploads/affiche-croisette.jpg",
+      "alt": "Affiche de La Croisette — mardi 15 septembre, croisière 21h, River's King, 16€",
+      "ratio": "1179/1462",
+      "responsive": true,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   },
   {
     "slug": "begins",
@@ -248,7 +269,28 @@ window.BDE_EVENTS = [
       }
     ],
     "artists": [],
-    "reverse": false
+    "reverse": false,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "",
+      "alt": "",
+      "ratio": "",
+      "responsive": false,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   },
   {
     "slug": "wei",
@@ -375,7 +417,28 @@ window.BDE_EVENTS = [
       }
     ],
     "artists": [],
-    "reverse": true
+    "reverse": true,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "",
+      "alt": "",
+      "ratio": "",
+      "responsive": false,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   },
   {
     "slug": "nuitdauphine",
@@ -522,7 +585,28 @@ window.BDE_EVENTS = [
       }
     ],
     "artists": [],
-    "reverse": false
+    "reverse": false,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "",
+      "alt": "",
+      "ratio": "",
+      "responsive": false,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   },
   {
     "slug": "howwedau",
@@ -682,7 +766,28 @@ window.BDE_EVENTS = [
         "highlight": false
       }
     ],
-    "reverse": true
+    "reverse": true,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "",
+      "alt": "",
+      "ratio": "",
+      "responsive": false,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   },
   {
     "slug": "gala",
@@ -837,7 +942,28 @@ window.BDE_EVENTS = [
       }
     ],
     "artists": [],
-    "reverse": false
+    "reverse": false,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "",
+      "alt": "",
+      "ratio": "",
+      "responsive": false,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   },
   {
     "slug": "prixmode",
@@ -960,7 +1086,28 @@ window.BDE_EVENTS = [
       }
     ],
     "artists": [],
-    "reverse": true
+    "reverse": true,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "",
+      "alt": "",
+      "ratio": "",
+      "responsive": false,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   },
   {
     "slug": "dauphinend",
@@ -1063,6 +1210,27 @@ window.BDE_EVENTS = [
       }
     ],
     "artists": [],
-    "reverse": false
+    "reverse": false,
+    "affiche": {
+      "mode": "AUTO",
+      "image": "",
+      "alt": "",
+      "ratio": "",
+      "responsive": false,
+      "daysBefore": 0,
+      "title": {
+        "fr": "",
+        "en": ""
+      },
+      "text": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaLabel": {
+        "fr": "",
+        "en": ""
+      },
+      "ctaUrl": ""
+    }
   }
 ];

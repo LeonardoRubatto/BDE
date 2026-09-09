@@ -1,6 +1,6 @@
 // =====================================================
 // FICHIER GLOBAL DU SITE
-// Généré automatiquement par sync.py le 24/06/2026 09:33
+// Généré automatiquement par sync.py le 09/09/2026 18:03
 // Modifier via csv/config.csv et csv/navigation.csv
 // ou directement dans ce fichier.
 // Ne pas renommer window.BDE_SITE.
@@ -38,6 +38,13 @@ window.BDE_SITE = {
     "descriptionEn": "Official ticketing",
     "note": "",
     "noteEn": ""
+  },
+  "affiche": {
+    "active": true,
+    "daysBefore": 14,
+    "frequency": "session",
+    "pages": "toutes",
+    "delayMs": 700
   },
   "navigation": [
     {

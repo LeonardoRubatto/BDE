@@ -30,3 +30,8 @@ ticket_description,Billetterie officielle,Description affichée dans le modal bi
 ticket_descriptionEn,Official ticketing,Description affichée dans le modal billetterie en anglais
 ticket_note,,Note informative dans le modal billetterie en français (ex: tarif réduit)
 ticket_noteEn,,Note informative dans le modal billetterie en anglais
+affiche_active,OUI,OUI = l'affiche de l'événement à venir peut s'afficher / NON = fonctionnalité désactivée partout
+affiche_joursAvant,14,Nombre de jours avant l'événement où l'affiche commence à s'afficher (défaut : 14)
+affiche_frequence,session,session = une fois par visite / evenement = une fois par événement / toujours = à chaque page
+affiche_pages,toutes,toutes = sur toutes les pages / home = uniquement sur la page d'accueil
+affiche_delaiMs,700,Délai en millisecondes avant l'apparition de l'affiche (défaut : 700)
