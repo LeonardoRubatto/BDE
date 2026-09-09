@@ -59,7 +59,8 @@ def main():
     print("  Génération des fichiers CSV...")
 
     # ── config.csv ───────────────────────────────────────────────
-    ticket = site.get("ticket") or {}
+    ticket  = site.get("ticket")  or {}
+    affiche = site.get("affiche") or {}
     rows = [["CHAMP", "VALEUR", "DESCRIPTION (impact sur le site)"]]
     rows += [
         ["## Nom du champ (ne pas modifier)", "Valeur à modifier", "Explication de l'impact sur le site"],
@@ -93,6 +94,11 @@ def main():
         ["ticket_descriptionEn",  s(ticket.get("descriptionEn")),        "Description affichée dans le modal billetterie en anglais"],
         ["ticket_note",           s(ticket.get("note")),                 "Note informative dans le modal billetterie en français (ex: tarif réduit)"],
         ["ticket_noteEn",         s(ticket.get("noteEn")),               "Note informative dans le modal billetterie en anglais"],
+        ["affiche_active",        b(affiche.get("active")),              "OUI = l'affiche de l'événement à venir peut s'afficher / NON = fonctionnalité désactivée partout"],
+        ["affiche_joursAvant",    s(affiche.get("daysBefore")),          "Nombre de jours avant l'événement où l'affiche commence à s'afficher (défaut : 14)"],
+        ["affiche_frequence",     s(affiche.get("frequency")),           "session = une fois par visite / evenement = une fois par événement / toujours = à chaque page"],
+        ["affiche_pages",         s(affiche.get("pages")),               "toutes = sur toutes les pages / home = uniquement sur la page d'accueil"],
+        ["affiche_delaiMs",       s(affiche.get("delayMs")),             "Délai en millisecondes avant l'apparition de l'affiche (défaut : 700)"],
     ]
     write_csv("config.csv", rows)
 
@@ -117,6 +123,10 @@ def main():
         "GOOGLE PHOTOS URL", "PAGE GALERIE", "GALERIE LABEL",
         "SUR HOME (OUI/NON)", "SUR ÉVÉNEMENTS (OUI/NON)", "SUR PAGE NUITS (OUI/NON)",
         "FEATURED (OUI/NON)", "STATUS", "REVERSE (OUI/NON)",
+        "AFFICHE (OUI/NON/AUTO)", "AFFICHE IMAGE", "AFFICHE ALT", "AFFICHE RATIO",
+        "AFFICHE IMAGES RESPONSIVES (OUI/NON)", "AFFICHE JOURS AVANT",
+        "AFFICHE TITRE FR", "AFFICHE TITRE EN", "AFFICHE TEXTE FR", "AFFICHE TEXTE EN",
+        "AFFICHE CTA LABEL FR", "AFFICHE CTA LABEL EN", "AFFICHE CTA URL",
     ]]
     rows.append([
         "## Identifiant unique interne (ne jamais modifier)",
@@ -156,6 +166,19 @@ def main():
         "OUI = mis en avant visuellement sur la page événements (grande carte)",
         "Statut technique interne",
         "OUI = inverser l'ordre texte/image sur la carte homepage",
+        "AUTO = l'affiche apparaît seule avant l'événement / OUI = forcer maintenant / NON = jamais",
+        "Chemin de l'affiche de l'événement (ex: uploads/affiche-croisette.jpg) — vide = pas d'affiche",
+        "Texte alternatif de l'affiche (accessibilité et SEO)",
+        "Dimensions réelles de l'affiche en pixels, largeur/hauteur (ex: 1179/1462) — donné par make_affiche.py ; obligatoire si IMAGES RESPONSIVES = OUI",
+        "OUI = les versions AVIF/WebP existent (make_affiche.py) — exige un RATIO en pixels / NON = image simple",
+        "Nombre de jours avant l'événement où l'affiche apparaît — vide = valeur globale de config.csv",
+        "Titre affiché sur l'affiche en français — vide = titre de l'événement",
+        "Titre affiché sur l'affiche en anglais — vide = titre de l'événement",
+        "Ligne d'information sous le titre en français — vide = date et salle de l'événement",
+        "Ligne d'information sous le titre en anglais — vide = date et salle de l'événement",
+        "Texte du bouton billetterie en français — vide = Réserver sur Shotgun",
+        "Texte du bouton billetterie en anglais — vide = Book on Shotgun",
+        "Lien billetterie de l'affiche — vide = TICKET URL de l'événement, puis lien global",
     ])
     for ev in events:
         dl   = ev.get("dateLabel")          or {}
@@ -164,6 +187,10 @@ def main():
         hp   = ev.get("homePeriodI18n")     or {}
         dlab = ev.get("dossierLabel")       or {}
         imgs = ev.get("images")             or []
+        aff  = ev.get("affiche")            or {}
+        atit = aff.get("title")             or {}
+        atxt = aff.get("text")              or {}
+        acta = aff.get("ctaLabel")          or {}
         main = s(ev.get("image"))
         supp = " ; ".join(img for img in imgs if img != main)
         rows.append([
@@ -181,6 +208,10 @@ def main():
             s(ev.get("googlePhotosUrl")), s(ev.get("galleryPage")), s(ev.get("galleryLabel")),
             b(ev.get("showOnHome")), b(ev.get("showOnEventsPage")), b(ev.get("showOnNuitsPage")),
             b(ev.get("featured")), s(ev.get("status")), b(ev.get("reverse")),
+            s(aff.get("mode")), s(aff.get("image")), s(aff.get("alt")), s(aff.get("ratio")),
+            b(aff.get("responsive")), (aff.get("daysBefore") or ""),
+            s(atit.get("fr")), s(atit.get("en")), s(atxt.get("fr")), s(atxt.get("en")),
+            s(acta.get("fr")), s(acta.get("en")), s(aff.get("ctaUrl")),
         ])
     write_csv("events.csv", rows)
 

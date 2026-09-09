@@ -560,6 +560,10 @@
      Source : /data/site.js > ticket
      Modifier le lien Shotgun dans data/site.js.
      ===================================================== --><div class="modal-overlay" data-render="ticket-modal" id="ticketModal" onclick="closeModalOnBg(event)"></div>
+<!-- =====================================================
+     AFFICHE DE L'ÉVÉNEMENT À VENIR — contenu généré par js/render.js
+     Réglages : csv/config.csv (affiche_*) et csv/events.csv (colonnes AFFICHE *)
+     ===================================================== --><dialog class="affiche-dialog" data-render="affiche" id="afficheModal" aria-labelledby="afficheTitle"></dialog>
 
 <!-- =====================================================
      DONNÉES + MOTEUR DE RENDU
@@ -576,6 +580,7 @@
 <script src="js/components.js"></script>
 <script src="js/render.js"></script>
 <script src="js/main.js"></script>
+<script src="js/affiche.js"></script>
 <script>
     const dot=document.getElementById('cursorDot'),blob=document.getElementById('cursorBlob');
     let mx=0,my=0,bx=0,by=0;

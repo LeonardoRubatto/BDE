@@ -25,7 +25,9 @@ data/artists.js        →  artistes du carrousel homepage
 js/render.js           →  moteur de rendu (lit data/, injecte dans le HTML)
 js/components.js       →  composants communs (nav, footer, modal, sponsors)
 js/main.js             →  point d'entrée
+js/affiche.js          →  affiche du prochain événement (ouverture, animation)
 style.css              →  design global
+make_affiche.py        →  prépare une affiche pour le site (voir ci-dessous)
 ```
 
 ---
@@ -54,6 +56,8 @@ Ouvrir dans Excel ou Google Sheets, modifier, sauvegarder, pousser sur GitHub.
 | `artists_bande.csv` | Bande de texte défilant |
 | `galleries.csv` | Galeries photos |
 | `gallery_images.csv` | Photos par galerie |
+
+Les colonnes `AFFICHE *` d'`events.csv` et les lignes `affiche_*` de `config.csv` pilotent l'affiche présentée à l'arrivée sur le site (voir ci-dessous).
 
 ### Niveau 3 — Automatique via GitHub Actions
 **Dès qu'un push est détecté sur `main` :**
@@ -115,6 +119,41 @@ Puis ouvrir `http://localhost:8000`
 | `NON` | false |
 | *(cellule vide)* | chaîne vide / non défini |
 | `a.jpg ; b.jpg` | liste de chemins séparés par `;` |
+
+---
+
+## Affiche du prochain événement
+
+À l'arrivée sur le site, l'affiche de l'événement à venir est présentée par-dessus la page, avec le lien Shotgun en dessous. Elle apparaît **seule 14 jours avant la date de l'événement** et s'éteint le lendemain. Une seule fois par visite.
+
+**Mettre une nouvelle affiche :**
+
+```bash
+python make_affiche.py mon-affiche.jpg croisette
+```
+
+Le script génère les versions légères (AVIF + WebP en 640, 960 et 1536 px) dans `uploads/` — une affiche de 4 Mo tombe à ~25 Ko — puis affiche les valeurs à recopier dans `csv/events.csv`, sur la ligne de l'événement. Il ne fabrique jamais une taille plus grande que l'original, et le site n'annonce que celles qui existent.
+
+| Colonne | Valeur |
+|---|---|
+| `AFFICHE IMAGE` | `uploads/affiche-croisette.jpg` |
+| `AFFICHE RATIO` | `1179/1462` (dimensions réelles en pixels) |
+| `AFFICHE IMAGES RESPONSIVES` | `OUI` |
+| `AFFICHE` | `AUTO` |
+
+Tout le reste peut rester vide : le titre reprend le nom de l'événement, la ligne d'info sa date et sa salle, le bouton le lien Shotgun.
+
+**Les interrupteurs :**
+
+| Colonne `AFFICHE` | Effet |
+|---|---|
+| `AUTO` | Apparaît et disparaît toute seule autour de la date |
+| `OUI` | Affichée tout de suite, quelle que soit la date |
+| `NON` | Jamais affichée pour cet événement |
+
+Réglages généraux dans `csv/config.csv` : `affiche_active` (interrupteur général), `affiche_joursAvant` (14), `affiche_frequence` (`session` / `evenement` / `toujours`), `affiche_pages` (`toutes` / `home`), `affiche_delaiMs` (700).
+
+Prérequis du script : `pip install pillow`.
 
 ---
 

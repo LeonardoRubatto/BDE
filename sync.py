@@ -149,6 +149,13 @@ def build_site():
             "description": g("ticket_description"), "descriptionEn": g("ticket_descriptionEn"),
             "note": g("ticket_note"), "noteEn": g("ticket_noteEn"),
         },
+        "affiche": {
+            "active": bv(g("affiche_active")),
+            "daysBefore": iv(g("affiche_joursAvant"), 14),
+            "frequency": g("affiche_frequence") or "session",
+            "pages": g("affiche_pages") or "toutes",
+            "delayMs": iv(g("affiche_delaiMs"), 700),
+        },
         "navigation": nav,
     }
     write_js("site.js", "BDE_SITE", site, HEADER_SITE)
@@ -171,7 +178,7 @@ def build_events():
 
     events = []
     for row in read_csv("events.csv"):
-        row = pad(row, 37)
+        row = pad(row, 50)
         slug = sv(row[0])
         if not slug: continue
 
@@ -238,6 +245,18 @@ def build_events():
             "featured": bv(row[34]), "status": sv(row[35]),
             "tags": tags_out, "meta": meta_out, "artists": artists_out,
             "reverse": bv(row[36]),
+            "affiche": {
+                "mode": (sv(row[37]) or "AUTO").upper(),
+                "image": sv(row[38]),
+                "alt": sv(row[39]),
+                "ratio": sv(row[40]),
+                "responsive": bv(row[41]),
+                "daysBefore": iv(row[42], 0),
+                "title":    {"fr": sv(row[43]), "en": sv(row[44])},
+                "text":     {"fr": sv(row[45]), "en": sv(row[46])},
+                "ctaLabel": {"fr": sv(row[47]), "en": sv(row[48])},
+                "ctaUrl": sv(row[49]),
+            },
         })
 
     events.sort(key=lambda e: e["order"])

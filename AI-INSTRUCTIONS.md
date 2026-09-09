@@ -74,6 +74,7 @@ Les pages HTML contiennent des zones comme :
 <div data-render="events-page"></div>
 <div data-render="sponsor-cards"></div>
 <div data-render="gallery-masonry" data-gallery-slug="wei"></div>
+<dialog data-render="affiche" id="afficheModal"></dialog>
 ```
 
 Le moteur `js/render.js` lit ces marqueurs et injecte le contenu depuis les fichiers `data/*.js` au chargement de la page.
@@ -96,7 +97,9 @@ data/legal.js      → réserve future, non utilisée visuellement — ne pas to
 js/render.js       → moteur qui lit les données et génère les sections dynamiques
 js/components.js   → composants communs : nav, footer, sponsors, modal billetterie
 js/main.js         → lance le rendu
+js/affiche.js      → comportement de l'affiche : ouverture, animation, mémoire de visite
 style.css          → style visuel global
+make_affiche.py    → outil : prépare les versions légères d'une affiche (voir WORKFLOW M)
 ```
 
 Ne modifier ces fichiers que si la demande porte clairement sur une fonctionnalité impossible à obtenir par les fichiers `data/`.
@@ -134,6 +137,11 @@ galerie-*.html                                 → pages galerie, ne modifier qu
 | Ajouter les photos après un événement | `data/galleries.js` → slug correspondant |
 | Masquer un événement | `data/events.js` → `showOnHome: false` ou `showOnEventsPage: false` |
 | Masquer un partenaire | `data/sponsors.js` → `active: false` |
+| Mettre l'affiche du prochain événement | `data/events.js` → bloc `affiche` (voir WORKFLOW M) |
+| Retirer / cacher l'affiche tout de suite | `data/events.js` → `affiche.mode: "NON"` |
+| Désactiver l'affiche sur tout le site | `data/site.js` → `affiche.active: false` |
+| Changer le délai d'apparition de l'affiche | `data/site.js` → `affiche.daysBefore` |
+| L'affiche revient trop souvent / pas assez | `data/site.js` → `affiche.frequency` |
 
 ---
 
@@ -273,6 +281,22 @@ window.BDE_SITE = {
 }
 ```
 
+**Bloc `affiche` de `data/site.js`** — réglages généraux de l'affiche :
+
+```js
+"affiche": {
+  "active": true,         // false = l'affiche ne s'affiche nulle part.
+  "daysBefore": 14,       // Combien de jours avant l'événement elle apparaît.
+  "frequency": "session", // "session" = une fois par visite (recommandé),
+                          // "evenement" = une seule fois par événement et par navigateur,
+                          // "toujours" = à chaque page (déconseillé).
+  "pages": "toutes",      // "toutes" = sur toutes les pages, "home" = accueil uniquement.
+  "delayMs": 700          // Délai avant l'apparition, en millisecondes.
+}
+```
+
+---
+
 ### `data/events.js`
 
 ```js
@@ -353,7 +377,27 @@ window.BDE_SITE = {
   "artists": [                 // Tags artistes dans la section événement.
     { "label": "Gazo (2026)", "highlight": true }
   ],
-  "reverse": false             // true = image et texte inversés sur desktop.
+  "reverse": false,            // true = image et texte inversés sur desktop.
+
+  // Affiche présentée à l'arrivée sur le site (voir WORKFLOW M).
+  // Sans "image", aucune affiche n'est montrée pour cet événement.
+  "affiche": {
+    "mode": "AUTO",            // "AUTO" = apparaît seule avant l'événement,
+                               // "OUI" = forcer maintenant, "NON" = jamais.
+    "image": "uploads/affiche-croisette.jpg",
+    "alt": "Affiche de La Croisette 2026",
+    "ratio": "1179/1462",      // Dimensions réelles en pixels (largeur/hauteur), données
+                               // par make_affiche.py. Évite tout décalage au chargement
+                               // ET indique quelles variantes existent. Vide = 2/3.
+    "responsive": true,        // true = les versions AVIF/WebP existent (make_affiche.py).
+                               // Exige un "ratio" en pixels : sans lui, le site sert
+                               // l'image simple, par sécurité.
+    "daysBefore": 0,           // 0 = utiliser la valeur globale de data/site.js.
+    "title":    { "fr": "", "en": "" },  // Vide = titre de l'événement.
+    "text":     { "fr": "", "en": "" },  // Vide = date et salle de l'événement.
+    "ctaLabel": { "fr": "", "en": "" },  // Vide = "Réserver sur Shotgun".
+    "ctaUrl": ""               // Vide = ticketUrl de l'événement, puis lien global.
+  }
 }
 ```
 
@@ -780,6 +824,99 @@ Si une nouvelle page HTML est nécessaire :
 
 ---
 
+### WORKFLOW M — Mettre l'affiche du prochain événement
+
+L'affiche est l'image de l'événement, présentée par-dessus le site quand
+quelqu'un arrive, avec le lien Shotgun juste en dessous. Elle apparaît
+**toute seule 14 jours avant la date de l'événement** et disparaît le
+lendemain de l'événement. Il n'y a rien à programmer et rien à retirer
+après coup.
+
+**Étape 1 — préparer l'image.**
+
+Placer l'affiche (telle qu'elle sort de Canva, même lourde) dans le
+dossier du site, puis lancer :
+
+```
+python make_affiche.py mon-affiche.jpg croisette
+```
+
+Le script crée les versions légères (AVIF + WebP en 640, 960 et 1536 px
+de large, plus un JPG de secours) dans `uploads/`, et affiche à la fin les
+valeurs exactes à recopier. Une affiche de 4 Mo tombe ainsi à environ
+25 Ko.
+
+Il ne crée jamais une version **plus large que l'image d'origine** : une
+affiche de 1179 px de large donne donc les tailles 640 et 960 seulement,
+et le script le dit dans sa sortie. C'est normal, il n'y a rien à
+corriger — le site n'annonce que les tailles réellement présentes.
+
+Si Pillow n'est pas installé : `pip install pillow`.
+
+**Étape 2 — renseigner l'événement.**
+
+Dans `data/events.js`, trouver l'événement concerné et remplir son bloc
+`affiche` avec ce que le script a affiché :
+
+```js
+"affiche": {
+  "mode": "AUTO",
+  "image": "uploads/affiche-croisette.jpg",
+  "alt": "Affiche de La Croisette 2026",
+  "ratio": "1179/1462",
+  "responsive": true,
+  "daysBefore": 0,
+  "title":    { "fr": "", "en": "" },
+  "text":     { "fr": "", "en": "" },
+  "ctaLabel": { "fr": "", "en": "" },
+  "ctaUrl": ""
+}
+```
+
+C'est terminé. Tout ce qui est laissé vide se remplit tout seul : le
+titre reprend le nom de l'événement, la ligne d'info reprend sa date et
+sa salle, le bouton reprend le lien Shotgun. Le compte à rebours
+(« Dans 6 jours ») est calculé automatiquement.
+
+**Sans passer par le script** (image simple, non optimisée — à éviter
+pour une vraie affiche) : renseigner `image` et `alt`, laisser
+`"responsive": false`, et indiquer `ratio` (largeur/hauteur de l'image).
+
+Ne jamais mettre `"responsive": true` sans avoir lancé le script : les
+versions légères n'existeraient pas. Le site s'en protège (il retombe sur
+l'image simple si `ratio` n'est pas en pixels), mais l'affiche serait
+servie lourde.
+
+**Les trois interrupteurs :**
+
+| Besoin | Valeur |
+|---|---|
+| Laisser faire — apparaît et disparaît toute seule | `"mode": "AUTO"` |
+| La montrer tout de suite, quelle que soit la date | `"mode": "OUI"` |
+| Ne jamais la montrer pour cet événement | `"mode": "NON"` |
+
+**Cas particuliers :**
+
+- **Deux événements rapprochés** : le plus proche gagne. Un `"OUI"` forcé
+  passe devant tout le reste.
+- **Fenêtre différente pour un événement** : mettre `"daysBefore": 21`
+  sur cet événement (au lieu de `0`, qui suit la valeur globale).
+- **Texte personnalisé** : remplir `title`, `text` ou `ctaLabel`. Ce qui
+  est rempli remplace la valeur automatique, dans les deux langues.
+- **Tout couper** : dans `data/site.js`, `"affiche": { "active": false }`.
+
+**Ce qu'il ne faut pas faire :**
+
+- Ne pas retirer l'affiche à la main après l'événement — elle s'arrête
+  seule le lendemain.
+- Ne pas remplir `image` sans avoir mis le fichier dans `uploads/` :
+  sans image, aucune affiche n'est montrée (c'est voulu, pas une panne).
+- Ne pas supprimer l'ancienne affiche d'`uploads/` en changeant la
+  valeur d'`image` — supprimer aussi les 6 fichiers `-640/-960/-1536`
+  correspondants, sinon ils restent orphelins dans le dossier.
+
+---
+
 ## 9. Exemple de référence — Begin's
 
 L'événement Begin's illustre le fonctionnement complet du site.
@@ -845,6 +982,9 @@ Avant de rendre le fichier final, vérifier :
 - Transformer le site en framework
 - Utiliser des chemins locaux de machine (`C:\`, `/mnt/`, `file:///`)
 - Mettre une couleur directement dans le HTML — le rouge est géré par `statusColor: "red"` via la classe CSS `.event-date--red`
+- Retirer l'affiche à la main après un événement — elle s'éteint seule le lendemain (WORKFLOW M)
+- Référencer une affiche sans avoir mis le fichier dans `uploads/` — sans image, rien ne s'affiche
+- Supprimer une ancienne affiche d'`uploads/` sans supprimer aussi ses 6 variantes `-640/-960/-1536`
 
 ---
 
